@@ -9,6 +9,14 @@ package Grupp2.calculator.view;
  *
  * @author Darko
  */
-public class PrintMenu {
+public class Menu {
+    
+    public Menu(){
+        
+    }
+    
+    public void printMenu(){
+        System.out.println("Mata in några tal..");
+    }
     
 }

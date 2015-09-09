@@ -9,6 +9,6 @@ package Grupp2.calculator.view;
  *
  * @author Darko
  */
-public class PrintResult {
+public class Result {
     
 }

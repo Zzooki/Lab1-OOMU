@@ -9,18 +9,34 @@ import Grupp2.calculator.model.*;
 import Grupp2.calculator.view.*;
 import Grupp2.calculator.exceptions.*;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Darko
  */
 public class Controller {
+    private int gear;
     
     public Controller(){
-        
+        this.gear = 0;
     }
-    
+    public Controller(int gear){
+        this.gear = gear;
+    }
     public void run(){
-       /* Loopa
+        Scanner input = new Scanner(System.in);
+        Menu menu = new Menu();
+        
+        while(true){
+            if(this.gear == 0){
+                menu.printMenu();
+                Calculate calc = new Calculate(input.nextLine());
+                calc.calculateExp();
+                
+            }
+        }
+        /* Loopa
             Hämta nästa RPN-rad (från användaren eller källfilen) 
             Om RPN-raden är null eller en en tom sträng
                  Avsluta Annars

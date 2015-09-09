@@ -12,12 +12,12 @@ import Grupp2.calculator.controller.Controller;
  * @author Darko
  */
 public class Calculator {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Controller cont = new Controller();
+        Controller cont = new Controller(0);
+        cont.run();
     }
     
 }

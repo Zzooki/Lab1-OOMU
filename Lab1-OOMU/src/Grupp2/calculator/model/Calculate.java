@@ -30,7 +30,7 @@ public class Calculate {
             bucket.set(readExp.next());
         }
         while(!bucket.isEmpty()){
-            switch(token = bucket.get().toString()){
+            switch(token = bucket.get()){
                 case "+":
                     
                     break;

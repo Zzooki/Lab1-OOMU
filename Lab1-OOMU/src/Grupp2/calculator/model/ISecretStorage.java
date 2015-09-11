@@ -11,7 +11,7 @@ import java.util.Stack;
  *
  * @author Darko
  */
-public class ISecretStorage {
+public class ISecretStorage{
     private Stack stack = new Stack();
 
     public ISecretStorage(){

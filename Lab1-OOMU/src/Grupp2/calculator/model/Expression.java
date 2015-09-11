@@ -30,9 +30,23 @@ public class Expression {
         right = value;
     }
     
+    public char getOperator(){
+        return operator;
+    }
+    
+    public Double getLeftValue(){
+        return left;
+    }
+    
+    public Double getRightValue(){
+        return right;
+    }
+    
     public boolean isRightFree(){
         return(right == null);
     }
     
-    
+    public boolean isLeftFree(){
+        return(left == null);
+    }
 }

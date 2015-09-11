@@ -16,8 +16,9 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Controller cont = new Controller(0);
+        Controller cont = new Controller(args.length);
         cont.run();
+        
     }
     
 }

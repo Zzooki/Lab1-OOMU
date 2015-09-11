@@ -10,5 +10,10 @@ package Grupp2.calculator.view;
  * @author Darko
  */
 public class Result {
-    
+    public Result(){
+        
+    }
+    public void printResult(Double result){
+        System.out.println(result);
+    }
 }

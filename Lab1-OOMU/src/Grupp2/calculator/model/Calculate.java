@@ -5,7 +5,7 @@
  */
 package Grupp2.calculator.model;
 
-import java.util.Stack;
+
 import java.util.Scanner;
 /**
  *
@@ -13,24 +13,43 @@ import java.util.Scanner;
  */
 public class Calculate {
     String exp;
-    Stack stack;
     
     
     public Calculate(String exp){
         this.exp = exp;
-        Stack stack = new Stack();
     }
     
     public void calculateExp(){
-        int token;
+        String token;
         Scanner readExp = new Scanner(exp);
+        ISecretStorage bucket = new ISecretStorage();
         
         System.out.println(exp);
         
-        if(readExp.hasNextInt())
-            token = readExp.nextInt();
-        /*else
-          switchbajs  
-        */
+        while(readExp.hasNext()){
+            bucket.set(readExp.next());
+        }
+        while(!bucket.isEmpty()){
+            switch(token = bucket.get().toString()){
+                case "+":
+                    
+                    break;
+                case "-":
+                    
+                    break;
+                case "/":
+                    
+                    break;
+                case "*":
+                    
+                    break;
+                case "%":
+                    
+                    break;
+                default:
+                    
+                    break;
+            }
+        }
     }
 }

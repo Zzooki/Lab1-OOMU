@@ -10,5 +10,29 @@ package Grupp2.calculator.model;
  * @author Darko
  */
 public class Expression {
+    private Double left, right;
+    private char operator;
+    
+    Expression(){
+        left = null;
+        right = null;
+    }
+    
+    public void setOperator(String token){
+        operator = token.charAt(0);
+    }
+    
+    public void setLeft(Double value){
+        left = value;
+    }
+    
+    public void setRight(Double value){
+        right = value;
+    }
+    
+    public boolean isRightFree(){
+        return(right == null);
+    }
+    
     
 }

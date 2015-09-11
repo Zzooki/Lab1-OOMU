@@ -28,6 +28,9 @@ public class Controller {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
         
+        if(gear != 0 || gear != 2)
+            //Exit();
+        
         while(true){
             if(this.gear == 0){
                 menu.printMenu();

@@ -19,13 +19,16 @@ public class Calculate {
     public Calculate(String exp){
         ISecretStorage bucket = new ISecretStorage();        
         Scanner readExp = new Scanner(exp);
-        Token t = new Token();
-        System.out.println(exp);
+        double d;
+        
         
         while(readExp.hasNext()){
             bucket.set(readExp.next());
         }
-        t.calcExp(bucket);
+        Token t = new Token(bucket.get());
+
+        d = t.calcExp(bucket);
+        System.out.println(d);
     }
     
     

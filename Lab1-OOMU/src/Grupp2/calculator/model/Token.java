@@ -33,6 +33,7 @@ public class Token {
             return oo.calcExp(bucket);
         }
         /*}catch{
+        }catch(NumberFormatException wrong){
         
         }*/
         return 0.0;

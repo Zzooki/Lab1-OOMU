@@ -26,5 +26,23 @@ public class Operator extends Token {
             
     public double calcExp(ISecretStorage bucket){
 
+        if(null != s)switch (s) {
+            case "+":
+                AddOp aOp = new AddOp();
+                return aOp.calcExp(bucket);
+            case "-":
+                SubOp sOp = new SubOp();
+                return sOp.calcExp(bucket);
+            case "*":
+                MultiplicationOp mOp = new MultiplicationOp();
+                return mOp.calcExp(bucket);
+            case "/":
+                DivisionOp dOp = new DivisionOp();
+                return dOp.calcExp(bucket);
+            case "%":
+                ModOp ModulusOp = new ModOp();
+                return ModulusOp.calcExp(bucket);
+        }
+        return 0.0;
     }
 }

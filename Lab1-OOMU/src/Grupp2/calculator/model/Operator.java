@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Grupp2.calculator.view;
+package Grupp2.calculator.model;
 
 /**
  *
  * @author Darko
  */
-public class Result {
-    public Result(){
+public class Operator extends Token {
+    
+    
+    public double calcExp(ISecretStorage bucket){
         
-    }
-    public void printResult(Double result){
-        System.out.println(result);
     }
 }

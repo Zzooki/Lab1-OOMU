@@ -35,7 +35,6 @@ public class Controller {
             if(this.gear == 0){
                 menu.printMenu();
                 Calculate calc = new Calculate(input.nextLine());
-                calc.calculateExp();
                 
             }
         }

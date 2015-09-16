@@ -5,23 +5,14 @@
  */
 package Grupp2.calculator.model;
 
-import Grupp2.calculator.view.*;
-
-import java.util.Scanner;
-import java.util.Set;
 /**
  *
  * @author Darko
  */
-public class Calculate {
+public class Operand extends Token{
     
     
-    public Calculate(String exp){
-
+    public double calcExp(ISecretStorage bucket){
         
     }
-    
-    
 }
-    
-

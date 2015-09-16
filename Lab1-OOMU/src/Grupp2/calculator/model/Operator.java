@@ -15,7 +15,7 @@ public class Operator extends Token {
     String s;
     
     Operator(){
-        
+        this.s = "";
     }
     
     Operator(String s){
@@ -25,6 +25,6 @@ public class Operator extends Token {
    
             
     public double calcExp(ISecretStorage bucket){
-        
+
     }
 }

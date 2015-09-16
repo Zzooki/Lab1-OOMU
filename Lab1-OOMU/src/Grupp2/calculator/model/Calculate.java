@@ -17,8 +17,15 @@ public class Calculate {
     
     
     public Calculate(String exp){
-
+        ISecretStorage bucket = new ISecretStorage();        
+        Scanner readExp = new Scanner(exp);
+        Token t = new Token();
+        System.out.println(exp);
         
+        while(readExp.hasNext()){
+            bucket.set(readExp.next());
+        }
+        t.calcExp(bucket);
     }
     
     

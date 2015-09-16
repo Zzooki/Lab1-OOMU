@@ -22,22 +22,20 @@ public class Token {
         this.s = s;
     }
     public double calcExp(ISecretStorage bucket){
-        double result = 0;
         
-        try{
+        //try{
         if(checkIfOperator()){
             Operator o = new Operator(this.s);
-            result += o.calcExp(bucket);
+            return o.calcExp(bucket);
         }
         else if (checkIfOperand()){
             Operand oo = new Operand(this.s);
-            result += oo.calcExp(bucket);
+            return oo.calcExp(bucket);
         }
-        }catch(){
+        /*}catch{
         
-        }
-        
-        return result;
+        }*/
+        return 0.0;
     }
     
     private boolean checkIfOperator(){

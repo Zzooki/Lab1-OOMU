@@ -13,15 +13,14 @@ public class Operand extends Token{
     String s;
     
     Operand(){
-        
+        this.s = "";
     }
     Operand(String s){
         this.s = s;
-        
     }
 
    
     public double calcExp(ISecretStorage bucket){
-        
+        return Double.parseDouble(s);
     }
 }

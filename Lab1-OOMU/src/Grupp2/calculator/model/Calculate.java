@@ -25,7 +25,7 @@ public class Calculate {
         while(readExp.hasNext()){
             bucket.set(new Token(readExp.next()));
         }
-        Token t = new Token();
+        Token t; //= new Token();
         t = (bucket.get());
 
         try{

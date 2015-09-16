@@ -17,9 +17,9 @@ public class SubOp extends Operator{
      
     public double calcExp(ISecretStorage bucket){
         Double RL, LL, sum;
-        Token TokenRL = new Token(bucket.get());
+        Token TokenRL = bucket.get();
         RL = TokenRL.calcExp(bucket);
-        Token TokenLL = new Token(bucket.get());
+        Token TokenLL = bucket.get();
         LL = TokenLL.calcExp(bucket);
         
         sum = LL - RL;

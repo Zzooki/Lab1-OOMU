@@ -23,12 +23,18 @@ public class Calculate {
         
         
         while(readExp.hasNext()){
-            bucket.set(readExp.next());
+            bucket.set(new Token(readExp.next()));
         }
-        Token t = new Token(bucket.get());
+        Token t = new Token();
+        t = (bucket.get());
 
-        d = t.calcExp(bucket);
-        System.out.println(d);
+        try{
+            d = t.calcExp(bucket);
+            System.out.println("Resultat: " + d);
+
+        }catch(NumberFormatException wrong){
+            
+        }
     }
     
     

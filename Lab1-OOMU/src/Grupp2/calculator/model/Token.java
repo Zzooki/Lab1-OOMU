@@ -23,19 +23,15 @@ public class Token {
     }
     public double calcExp(ISecretStorage bucket){
         
-        //try{
-        if(checkIfOperator()){
-            Operator o = new Operator(this.s);
-            return o.calcExp(bucket);
-        }
-        else if (checkIfOperand()){
-            Operand oo = new Operand(this.s);
-            return oo.calcExp(bucket);
-        }
-        /*}catch{
-        }catch(NumberFormatException wrong){
-        
-        }*/
+    if(checkIfOperator()){
+        Operator o = new Operator(this.s);
+        return o.calcExp(bucket);
+    }
+    else if (checkIfOperand()){
+        Operand oo = new Operand(this.s);
+        return oo.calcExp(bucket);
+    }
+
         return 0.0;
     }
     
@@ -51,6 +47,10 @@ public class Token {
           return false;  
         }  
         return true;
+    }
+    
+    public String tokenToString(){
+        return this.s;
     }
     
 }

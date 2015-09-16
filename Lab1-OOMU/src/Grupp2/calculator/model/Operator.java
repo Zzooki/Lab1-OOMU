@@ -15,7 +15,7 @@ public class Operator extends Token {
     String s;
     
     Operator(){
-        
+        s = "";
     }
     
     Operator(String s){
@@ -25,6 +25,25 @@ public class Operator extends Token {
    
             
     public double calcExp(ISecretStorage bucket){
-        
+        if(s == "+"){
+            AddOp aOp = new AddOp();
+            return aOp.calcExp(bucket);
+        }
+        else if(s == "-"){
+            SubOp sOp = new SubOp();
+            return sOp.calcExp(bucket);
+        }
+        else if (s == "*"){
+            MultiplicationOp mOp = new MultiplicationOp();
+           return mOp.calcExp(bucket);
+        }
+        else if (s == "/"){
+            DivisionOp dOp = new DivisionOp();
+            return dOp.calcExp(bucket);
+        }
+        else{
+            ModOp ModulusOp = new ModOp();
+            return ModulusOp.calcExp(bucket);
+        }
     }
 }

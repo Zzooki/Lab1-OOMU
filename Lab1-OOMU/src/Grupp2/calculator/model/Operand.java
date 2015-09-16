@@ -23,5 +23,6 @@ public class Operand extends Token{
    
     public double calcExp(ISecretStorage bucket){
         
+        return 0.0;
     }
 }

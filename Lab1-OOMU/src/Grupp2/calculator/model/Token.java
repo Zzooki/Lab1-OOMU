@@ -33,7 +33,7 @@ public class Token {
             Operand oo = new Operand(this.s);
             result += oo.calcExp(bucket);
         }
-        }catch(){
+        }catch(NumberFormatException wrong){
         
         }
         

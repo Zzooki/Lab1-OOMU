@@ -9,9 +9,21 @@ package Grupp2.calculator.model;
  *
  * @author Darko
  */
+
+
 public class Operator extends Token {
+    String s;
     
+    Operator(){
+        
+    }
     
+    Operator(String s){
+        this.s = s;
+    }
+
+   
+            
     public double calcExp(ISecretStorage bucket){
         
     }

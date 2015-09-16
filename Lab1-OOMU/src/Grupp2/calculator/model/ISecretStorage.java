@@ -18,12 +18,12 @@ public class ISecretStorage{
         
     }
     
-    public void set(Token t){
-        stack.push(t);
+    public void set(String s){
+        stack.push(s);
     }
     
-    public Token get(){
-        return (Token)stack.pop();
+    public String get(){
+        return (String)stack.pop();
     }
     
     public boolean isEmpty(){

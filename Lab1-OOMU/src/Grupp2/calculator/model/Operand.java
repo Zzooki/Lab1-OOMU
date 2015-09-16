@@ -10,8 +10,17 @@ package Grupp2.calculator.model;
  * @author Darko
  */
 public class Operand extends Token{
+    String s;
     
-    
+    Operand(){
+        
+    }
+    Operand(String s){
+        this.s = s;
+        
+    }
+
+   
     public double calcExp(ISecretStorage bucket){
         
     }

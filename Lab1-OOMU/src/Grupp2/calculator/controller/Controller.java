@@ -33,7 +33,11 @@ public class Controller {
         Menu menu = new Menu();
         double d;
         
-        if(gear != 0 && gear != 2) System.exit(1);
+        if(gear != 0 && gear != 2) 
+        {
+            System.out.println("Syntax: java Calculator " + args[0]);
+            System.exit(1);
+        }
         
         
         if(this.gear == 0){
@@ -61,10 +65,10 @@ public class Controller {
                 out.close();
             }
             catch(FileNotFoundException e){
-                System.err.println("Diz file does not exist!");
+                System.err.println(e);
             }
             catch(IOException q){
-                System.err.println("Something iz wrong do right!");
+                System.err.println(q);
             }
 
 

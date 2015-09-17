@@ -14,9 +14,13 @@ import java.util.Set;
  * @author Darko
  */
 public class Calculate {
-    
+    String exp;
     
     public Calculate(String exp){
+        this.exp = exp;
+    }
+    
+    public double CalculationMagic(){
         ISecretStorage bucket = new ISecretStorage();        
         Scanner readExp = new Scanner(exp);
         double d;
@@ -30,10 +34,11 @@ public class Calculate {
 
         try{
             d = t.calcExp(bucket);
-            System.out.println("Resultat: " + d);
+            return(d);
 
         }catch(NumberFormatException wrong){
-            
+            /// felhantering
+            return(0);
         }
     }
     

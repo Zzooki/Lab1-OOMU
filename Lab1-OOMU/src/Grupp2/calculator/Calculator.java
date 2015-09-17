@@ -17,7 +17,7 @@ public class Calculator {
      */
     public static void main(String[] args) {
         Controller cont = new Controller(args.length);
-        cont.run();
+        cont.run(args);
         
     }
     

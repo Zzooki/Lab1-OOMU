@@ -5,10 +5,16 @@
  */
 package Grupp2.calculator.exceptions;
 
+
 /**
  *
  * @author Darko
  */
-public class CheckUserInput {
+public class CheckUserInput extends Exception{
+    
+    
+    public CheckUserInput(String c){
+        super("Invalid Token: " + c);
+    }
     
 }

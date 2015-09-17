@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Grupp2.calculator.model;
+import Grupp2.calculator.exceptions.*;
 
 /**
  *
@@ -15,14 +16,17 @@ public class MultiplicationOp extends Operator{
     }
      
     public double calcExp(ISecretStorage bucket){
-        Double RL, LL, sum;
-        Token TokenRL = bucket.get();
-        RL = TokenRL.calcExp(bucket);
-        Token TokenLL = bucket.get();
-        LL = TokenLL.calcExp(bucket);
-        
-        sum = LL * RL;
-        
+        double RL, LL, sum = 0;
+        try{
+            Token TokenRL = bucket.get();
+            RL = TokenRL.calcExp(bucket);
+            Token TokenLL = bucket.get();
+            LL = TokenLL.calcExp(bucket);
+
+            sum = LL * RL;
+        }catch(CheckUserInput h){
+            System.err.println(h);
+        }
         return(sum);
     }
 }

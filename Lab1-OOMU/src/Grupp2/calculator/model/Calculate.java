@@ -6,6 +6,7 @@
 package Grupp2.calculator.model;
 
 import Grupp2.calculator.view.*;
+import Grupp2.calculator.exceptions.*;
 
 import java.util.Scanner;
 import java.util.Set;
@@ -37,9 +38,11 @@ public class Calculate {
             return(d);
 
         }catch(NumberFormatException wrong){
-            /// felhantering
-            return(0);
+            System.err.println(wrong);
+        }catch(CheckUserInput h){
+            System.err.println(h);
         }
+        return 0;
     }
     
     

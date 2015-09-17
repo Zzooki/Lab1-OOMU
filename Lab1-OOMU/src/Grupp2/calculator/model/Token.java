@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Grupp2.calculator.model;
+import Grupp2.calculator.exceptions.CheckUserInput;
 
 /**
  *
@@ -21,7 +22,7 @@ public class Token {
     Token(String s){
         this.s = s;
     }
-    public double calcExp(ISecretStorage bucket){
+    public double calcExp(ISecretStorage bucket) throws CheckUserInput{
         
     if(checkIfOperator()){
         Operator o = new Operator(this.s);
@@ -30,9 +31,9 @@ public class Token {
     else if (checkIfOperand()){
         Operand oo = new Operand(this.s);
         return oo.calcExp(bucket);
-    }
-
-        return 0.0;
+       }
+    else
+        throw new CheckUserInput(s);
     }
     
     private boolean checkIfOperator(){

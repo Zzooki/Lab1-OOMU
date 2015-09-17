@@ -43,11 +43,15 @@ public class Controller {
             }
             else{
                 try{
-                Scanner in = new Scanner(new FileInputStream(args[0]));
-                Calculate calc = new Calculate((String)in.next());
+                //Scanner in = new Scanner(System.in); //(new FileInputStream(args[0]));
+                File file = new File("/Users/Zzooki/Documents/NetBeansProjects/Lab1-OOMU/Lab1-OOMU/nbproject/infile.txt");
+                        //new File(args[0]); 
+                Scanner in = new Scanner(file);
+                Calculate calc = new Calculate(in.nextLine());
                 d = calc.CalculationMagic();
                 
-                FileWriter out = new FileWriter(new File(args[1]));
+                FileWriter out = new FileWriter("/Users/Zzooki/Documents/NetBeansProjects/Lab1-OOMU/Lab1-OOMU/nbproject/outfile.txt");
+                //(new File(args[1]));
                 out.write(d + "\n");
                 }
                 catch(FileNotFoundException e){

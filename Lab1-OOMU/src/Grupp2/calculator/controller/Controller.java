@@ -11,6 +11,7 @@ import Grupp2.calculator.exceptions.*;
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
 import java.io.*;
+import static java.lang.System.out;
 
 import java.util.Scanner;
 
@@ -34,36 +35,41 @@ public class Controller {
         
         if(gear != 0 && gear != 2) System.exit(1);
         
-        while(true){
-            if(this.gear == 0){
+        
+        if(this.gear == 0){
+            while(true){
                 menu.printMenu();
                 Calculate calc = new Calculate(input.nextLine());
                 d = calc.CalculationMagic();
                 System.out.println("Resultat: " + d);
             }
-            else{
-                try{
-                //Scanner in = new Scanner(System.in); //(new FileInputStream(args[0]));
-                File file = new File("/Users/Zzooki/Documents/NetBeansProjects/Lab1-OOMU/Lab1-OOMU/nbproject/infile.txt");
-                        //new File(args[0]); 
-                Scanner in = new Scanner(file);
-                Calculate calc = new Calculate(in.nextLine());
-                d = calc.CalculationMagic();
-                
-                FileWriter out = new FileWriter("/Users/Zzooki/Documents/NetBeansProjects/Lab1-OOMU/Lab1-OOMU/nbproject/outfile.txt");
-                //(new File(args[1]));
-                out.write(d + "\n");
-                }
-                catch(FileNotFoundException e){
-                    System.err.println("Diz file does not exist!");
-                }
-                catch(IOException q){
-                    System.err.println("Something iz wrong do right!");
-                }
-                
-                
-            }
         }
+        else{
+            try{
+                File inFile = new File(args[0]);
+                File outFile = new File(args[1]);
+                FileWriter out = new FileWriter(outFile);
+                
+                Scanner in = new Scanner(inFile);
+                while(in.hasNextLine()){
+                    Calculate calc = new Calculate(in.nextLine());
+                    d = calc.CalculationMagic();
+                    out.write(d + "\n");
+                }
+                
+                out.flush();
+                out.close();
+            }
+            catch(FileNotFoundException e){
+                System.err.println("Diz file does not exist!");
+            }
+            catch(IOException q){
+                System.err.println("Something iz wrong do right!");
+            }
+
+
+        }
+
         
         /* Loopa
             Hämta nästa RPN-rad (från användaren eller källfilen) 

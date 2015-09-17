@@ -31,6 +31,7 @@ public class Controller {
     public void run(String args[]){
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
+        String line;
         double d;
         
         if(gear != 0 && gear != 2) 
@@ -43,7 +44,9 @@ public class Controller {
         if(this.gear == 0){
             while(true){
                 menu.printMenu();
-                Calculate calc = new Calculate(input.nextLine());
+                line = input.nextLine();
+                if ("".equals(line)) System.exit(1);
+                Calculate calc = new Calculate(line);
                 d = calc.CalculationMagic();
                 System.out.println("Resultat: " + d);
             }

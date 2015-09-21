@@ -30,6 +30,7 @@ public class SecretStorage implements ISecretInterface{
     /**
      * @param set(Token s) adds a token to the stack when called for.
      */
+    @Override
     public void set(Token s){
         stack.push(s);
     }
@@ -37,6 +38,7 @@ public class SecretStorage implements ISecretInterface{
     /**
      * @param get returns a token and removes it from the stack.
      */
+    @Override
     public Token get(){      
         return (Token)stack.pop();
     }
@@ -44,6 +46,7 @@ public class SecretStorage implements ISecretInterface{
     /**
      * @param isEmpty returns true if the stack is empty
      */
+    @Override
     public boolean isEmpty(){
         return stack.empty();
     }

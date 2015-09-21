@@ -57,8 +57,7 @@ public class Controller {
                 File inFile = new File(args[0]);
                 File outFile = new File(args[1]);
                 FileWriter out = new FileWriter(outFile);
-                PrintStream outs = new PrintStream(new FileOutputStream(args[1]));
-                System.setOut(outs);
+
                 
                 Scanner in = new Scanner(inFile);
                 while(in.hasNextLine()){
@@ -66,6 +65,8 @@ public class Controller {
                     d = calc.CalculationMagic();
                     if(d != null)
                         out.write(d + "\n");
+                    else
+                        out.write("Error\n");
                 }
                 
                 out.flush();

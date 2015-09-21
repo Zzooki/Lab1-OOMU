@@ -27,6 +27,7 @@ public class Calculate {
         Double d;
         
         
+        
         while(readExp.hasNext()){
             bucket.set(new Token(readExp.next()));
         }

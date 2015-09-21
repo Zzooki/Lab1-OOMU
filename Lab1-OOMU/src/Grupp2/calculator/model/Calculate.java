@@ -41,11 +41,8 @@ public class Calculate {
                 return(d);
 
         }catch(NumberFormatException wrong){
-            System.err.println(wrong);
         }catch(CheckUserInput h){
-            System.err.println(h);
         }catch(InvalidOperationException h){
-            System.err.println(h);
         }
         
         return null;

@@ -32,7 +32,7 @@ public class Controller {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
         String line;
-        double d;
+        Double d;
         
         if(gear != 0 && gear != 2) 
         {
@@ -48,7 +48,8 @@ public class Controller {
                 if ("".equals(line)) System.exit(1);
                 Calculate calc = new Calculate(line);
                 d = calc.CalculationMagic();
-                System.out.println("Resultat: " + d);
+                if(d != null)
+                    System.out.println("Resultat: " + d);
             }
         }
         else{
@@ -61,7 +62,8 @@ public class Controller {
                 while(in.hasNextLine()){
                     Calculate calc = new Calculate(in.nextLine());
                     d = calc.CalculationMagic();
-                    out.write(d + "\n");
+                    if(d != null)
+                        out.write(d + "\n");
                 }
                 
                 out.flush();

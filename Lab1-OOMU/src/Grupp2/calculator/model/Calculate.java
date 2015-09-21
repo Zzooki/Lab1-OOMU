@@ -21,10 +21,10 @@ public class Calculate {
         this.exp = exp;
     }
     
-    public double CalculationMagic(){
+    public Double CalculationMagic(){
         ISecretStorage bucket = new ISecretStorage();        
         Scanner readExp = new Scanner(exp);
-        double d;
+        Double d;
         
         
         while(readExp.hasNext()){
@@ -36,18 +36,22 @@ public class Calculate {
         try{
             d = t.calcExp(bucket);
             if(!bucket.isEmpty())
-                throw new NumberFormatException("InvalidOperationException");
-            return(d);
+                throw new InvalidOperationException(t.tokenToString());
+            else
+                return(d);
 
         }catch(NumberFormatException wrong){
             System.err.println(wrong);
         }catch(CheckUserInput h){
             System.err.println(h);
+        }catch(InvalidOperationException h){
+            System.err.println(h);
         }
-        return 0;
+        
+        return null;
     }
     
     
 }
-    
+
 

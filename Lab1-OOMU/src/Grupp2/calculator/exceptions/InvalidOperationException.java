@@ -12,7 +12,7 @@ package Grupp2.calculator.exceptions;
 public class InvalidOperationException extends Exception{
     
     public InvalidOperationException(String s){
-        super ("InvalidOperationException!");
+        super (s);
     }
     
 }

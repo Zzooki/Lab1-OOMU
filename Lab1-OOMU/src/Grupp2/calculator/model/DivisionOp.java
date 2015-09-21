@@ -15,7 +15,7 @@ public class DivisionOp extends Operator{
         
     }
      
-    public double calcExp(ISecretStorage bucket){
+    public double calcExp(SecretStorage bucket){
         double RL, LL, sum = 0;
         try{
             Token TokenRL = bucket.get();

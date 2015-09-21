@@ -11,11 +11,11 @@ import java.util.Stack;
  *
  * @author Darko
  */
-public class ISecretStorage{
+public class SecretStorage implements ISecretInterface{
     private Stack stack = new Stack();
-
-    public ISecretStorage(){
-        
+    
+    
+    public void SecretStorage(){
     }
     
     public void set(Token s){

@@ -20,7 +20,7 @@ public class Operand extends Token{
     }
 
    
-    public double calcExp(ISecretStorage bucket){
+    public double calcExp(SecretStorage bucket){
         return Double.parseDouble(s);
     }
 }

@@ -22,7 +22,7 @@ public class Token {
     Token(String s){
         this.s = s;
     }
-    public double calcExp(ISecretStorage bucket) throws CheckUserInput{
+    public double calcExp(SecretStorage bucket) throws CheckUserInput{
         
     if(checkIfOperator()){
         Operator o = new Operator(this.s);

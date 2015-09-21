@@ -22,7 +22,7 @@ public class Calculate {
     }
     
     public double CalculationMagic(){
-        ISecretStorage bucket = new ISecretStorage();        
+        SecretStorage bucket = new SecretStorage();        
         Scanner readExp = new Scanner(exp);
         double d;
         

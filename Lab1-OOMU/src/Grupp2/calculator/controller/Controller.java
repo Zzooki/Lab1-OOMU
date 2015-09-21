@@ -19,8 +19,20 @@ import java.util.Scanner;
  *
  * @author Darko
  */
+
+    /**
+     * @param Controller class handles the running of the program and 
+     * creates a seperation between the beautiful craftmanship worthy to be
+     * called "implementation" and the user interface.
+     */
 public class Controller {
     private int gear;
+    
+    /**
+     * @param Controller the constructor for the controller class
+     * handles the value "gear" depending on this value the program
+     * will either read a file or read input from the user.
+     */
     
     public Controller(){
         this.gear = 0;
@@ -28,6 +40,15 @@ public class Controller {
     public Controller(int gear){
         this.gear = gear;
     }
+    
+    /**
+     * @param run(String args[]) this function is called for with the args
+     * array, cause it handles the running of the programm and will need the 
+     * source address for in and output files from the user incase user wishes
+     * to run the program with an in/output file. If that's not the case the
+     * program will run in "user-input mode", and the appropriate functions to
+     * evaluate the expression entered by the user will be called for.
+     */
     public void run(String args[]){
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
@@ -77,14 +98,6 @@ public class Controller {
 
         }
 
-        
-        /* Loopa
-            Hämta nästa RPN-rad (från användaren eller källfilen) 
-            Om RPN-raden är null eller en en tom sträng
-                 Avsluta Annars
-            Be kalkylatorn att beräkna resultatet av RPN-uttrycket 
-            Presentera resultatet (till användaren eller destinationsfilen)
-        */
     }
     
 }

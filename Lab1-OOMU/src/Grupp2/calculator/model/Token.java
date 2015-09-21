@@ -40,7 +40,7 @@ public class Token {
         return "+".equals(s) || "-".equals(s) || "/".equals(s) || "*".equals(s) ||"%".equals(s);
     }
     
-    private boolean checkIfOperand(){
+    public boolean checkIfOperand(){
         try{  
           double d = Double.parseDouble(s);  
         }  

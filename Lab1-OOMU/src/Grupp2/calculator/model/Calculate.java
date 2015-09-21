@@ -35,6 +35,8 @@ public class Calculate {
 
         try{
             d = t.calcExp(bucket);
+            if(!bucket.isEmpty())
+                throw new NumberFormatException("InvalidOperationException");
             return(d);
 
         }catch(NumberFormatException wrong){

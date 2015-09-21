@@ -37,7 +37,7 @@ public class Calculate {
      * withdrawn from the bucket to start the recursive call and the evaluation
      * process.
      */
-    public double CalculationMagic(){
+    public Double CalculationMagic(){
         SecretStorage bucket = new SecretStorage();        
         Scanner readExp = new Scanner(exp);
         Double d;

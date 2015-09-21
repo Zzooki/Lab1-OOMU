@@ -24,7 +24,7 @@ public class Operator extends Token {
 
    
             
-    public double calcExp(ISecretStorage bucket){
+    public double calcExp(SecretStorage bucket){
 
         if(null != s)switch (s) {
             case "+":

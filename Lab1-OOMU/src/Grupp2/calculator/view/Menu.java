@@ -11,7 +11,7 @@ package Grupp2.calculator.view;
  */
 
 /**
- * @param Menu the main menu of the program.
+ * Menu the main menu of the program.
  * @author Rasmus
  */
 public class Menu {

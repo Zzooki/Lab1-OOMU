@@ -13,7 +13,7 @@ import java.util.Stack;
  */
 
     /**
-     * @param SecretStorage implementation for the interface called 
+     * SecretStorage implementation for the interface called 
      * ISecretInterface. Datastructure chosen for this implementation 
      * is a stack.
      */
@@ -21,14 +21,14 @@ public class SecretStorage implements ISecretInterface{
     private Stack stack = new Stack();
     
     /**
-     * @param SecretStorage creates an object of the seacret storage wich will 
+     * SecretStorage creates an object of the seacret storage wich will 
      * hold the desired datastructure to save the tokens.
      */
     public void SecretStorage(){
     }
     
     /**
-     * @param set(Token s) adds a token to the stack when called for.
+     * set(Token s) adds a token to the stack when called for.
      */
     @Override
     public void set(Token s){
@@ -36,7 +36,7 @@ public class SecretStorage implements ISecretInterface{
     }
     
     /**
-     * @param get returns a token and removes it from the stack.
+     * get returns a token and removes it from the stack.
      */
     @Override
     public Token get(){      
@@ -44,7 +44,7 @@ public class SecretStorage implements ISecretInterface{
     }
     
     /**
-     * @param isEmpty returns true if the stack is empty
+     * isEmpty returns true if the stack is empty
      */
     @Override
     public boolean isEmpty(){

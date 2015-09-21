@@ -16,7 +16,7 @@ import java.util.Set;
  */
 
     /**
-     * @param Calculate class is a class handles the user input by changing the
+     * Calculate class is a class handles the user input by changing the
      * operators and operands into tokens and storing them in the choosen 
      * datastructure "bucket".
      */
@@ -24,7 +24,7 @@ public class Calculate {
     String exp;
     
     /**
-     * @param Calculate(String exp) constructor creats a Calculate object and stores the
+     * Calculate(String exp) constructor creats a Calculate object and stores the
      * expression as a string.
      */
     public Calculate(String exp){
@@ -32,7 +32,7 @@ public class Calculate {
     }
     
     /**
-     * @param CalculationMagic function that creates a new bucket and a scanner
+     * CalculationMagic function that creates a new bucket and a scanner
      * to handle the input and seperate it into tokens. Also the first token is
      * withdrawn from the bucket to start the recursive call and the evaluation
      * process.

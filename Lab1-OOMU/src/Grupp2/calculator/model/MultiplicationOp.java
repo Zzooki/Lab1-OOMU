@@ -12,12 +12,12 @@ import Grupp2.calculator.exceptions.*;
  */
 
     /**
-     * @param MultiplicationOp class is a subclass of the Operator class. This 
+     * MultiplicationOp class is a subclass of the Operator class. This 
      * handles the multiplication operator objects.
      */
 public class MultiplicationOp extends Operator{
     /**
-     * @param MultiplicationOp constructor creats an object of the 
+     * MultiplicationOp constructor creats an object of the 
      * multiplication operator.
      */
     public MultiplicationOp(){
@@ -25,7 +25,7 @@ public class MultiplicationOp extends Operator{
     }
      
      /**
-     * @param calcExp(seacretStorage bucket) this function handles the
+     * calcExp(seacretStorage bucket) this function handles the
      * evaluation of an expression with the multiplication operator. 
      * To be able to calculate the expression the function needs the 
      * datastructure in wich the operands is stored called the bucket. 

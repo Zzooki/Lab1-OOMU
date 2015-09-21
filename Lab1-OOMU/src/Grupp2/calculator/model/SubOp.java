@@ -12,20 +12,20 @@ import Grupp2.calculator.exceptions.*;
  */
 
     /**
-     * @param SubOp class is a subclass of the Operator class. This handles the
+     * SubOp class is a subclass of the Operator class. This handles the
      * subtraction operator objects.
      */
 public class SubOp extends Operator{
     
     /**
-     * @param SubOp constructor creats an object of the subtraction operator.
+     * SubOp constructor creats an object of the subtraction operator.
      */
      public SubOp(){
         
     }
      
      /**
-     * @param calcExp(seacretStorage bucket) this function handles the
+     * calcExp(seacretStorage bucket) this function handles the
      * evaluation of an expression with the subtraction operator. To be able to 
      * calculate the expression the function needs the datastructure in wich 
      * the operands is stored called the bucket. After the evaluation the

@@ -21,7 +21,7 @@ import java.util.Scanner;
  */
 
     /**
-     * @param Controller class handles the running of the program and 
+     * Controller class handles the running of the program and 
      * creates a seperation between the beautiful craftmanship worthy to be
      * called "implementation" and the user interface.
      */
@@ -29,7 +29,7 @@ public class Controller {
     private int gear;
     
     /**
-     * @param Controller the constructor for the controller class
+     * Controller the constructor for the controller class
      * handles the value "gear" depending on this value the program
      * will either read a file or read input from the user.
      */
@@ -42,7 +42,7 @@ public class Controller {
     }
     
     /**
-     * @param run(String args[]) this function is called for with the args
+     * run(String args[]) this function is called for with the args
      * array, cause it handles the running of the programm and will need the 
      * source address for in and output files from the user incase user wishes
      * to run the program with an in/output file. If that's not the case the

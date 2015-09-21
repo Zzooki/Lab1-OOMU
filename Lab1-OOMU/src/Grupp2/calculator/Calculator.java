@@ -13,13 +13,13 @@ import Grupp2.calculator.controller.Controller;
  */
 
     /**
-     * @param Calculator the class in wich the main function is called.
+     * Calculator the class in wich the main function is called.
      */
 
 public class Calculator {
     
     /**
-     * @param main function in wich a Controller object is created and the run
+     * main function in wich a Controller object is created and the run
      * function is called for.
      */
     public static void main(String[] args) {

@@ -11,7 +11,7 @@ package Grupp2.calculator.exceptions;
  * @author Darko
  */
 /**
- * @param CheckUserInput an exception that gets thrown when the user enters an invalid token into the
+ * CheckUserInput an exception that gets thrown when the user enters an invalid token into the
  * calculator, for example characters a-z.
  * @author Rasmus
  */

@@ -11,7 +11,7 @@ package Grupp2.calculator.exceptions;
  */
 
 /**
- * @param InvalidOperationException exception that gets thrown whenever the user tries to inputs an
+ * InvalidOperationException exception that gets thrown whenever the user tries to inputs an
  * expression that has too few or to many operators/operands.
  * @author Rasmus
  */

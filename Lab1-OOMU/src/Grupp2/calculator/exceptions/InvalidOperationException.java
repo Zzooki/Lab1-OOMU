@@ -9,6 +9,12 @@ package Grupp2.calculator.exceptions;
  *
  * @author Rasmus
  */
+
+/**
+ * @param InvalidOperationException exception that gets thrown whenever the user tries to inputs an
+ * expression that has too few or to many operators/operands.
+ * @author Rasmus
+ */
 public class InvalidOperationException extends Exception{
     
     public InvalidOperationException(String s){

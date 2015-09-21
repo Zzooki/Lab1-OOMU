@@ -17,15 +17,15 @@ public class SecretStorage implements ISecretInterface{
     
     public void SecretStorage(){
     }
-    
+    @Override
     public void set(Token s){
         stack.push(s);
     }
-    
+    @Override
     public Token get(){      
         return (Token)stack.pop();
     }
-    
+    @Override
     public boolean isEmpty(){
         return stack.empty();
     }

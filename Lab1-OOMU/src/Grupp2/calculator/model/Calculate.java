@@ -21,7 +21,7 @@ public class Calculate {
         this.exp = exp;
     }
     
-    public double CalculationMagic(){
+    public Double CalculationMagic(){
         SecretStorage bucket = new SecretStorage();        
         Scanner readExp = new Scanner(exp);
         Double d;

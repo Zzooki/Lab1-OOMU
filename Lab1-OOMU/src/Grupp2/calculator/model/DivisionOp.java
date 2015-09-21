@@ -22,7 +22,7 @@ public class DivisionOp extends Operator{
             RL = TokenRL.calcExp(bucket);
             Token TokenLL = bucket.get();
             LL = TokenLL.calcExp(bucket);
-
+            
             sum = LL / RL;
         }catch(CheckUserInput h){
             System.err.println(h);

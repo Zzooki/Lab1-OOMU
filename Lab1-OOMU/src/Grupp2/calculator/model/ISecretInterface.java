@@ -7,14 +7,10 @@ package Grupp2.calculator.model;
 
 /**
  *
- * @author Zzooki
+ * @author Tobias
  */
 
 
-    /**
-     * ISecretInterface interface for the datastructure choosen to store 
-     * the tokens.
-     */
 public interface ISecretInterface {
     
     /**
@@ -23,18 +19,22 @@ public interface ISecretInterface {
      */
     public void SecretStorage();
     /**
-     * set(Token s) accessor function that takes a token in order to add 
-     * it to the datastructure.
+     * set accessor function
+     * @param s s is the token that needs to be added to the datastructure
      */
     public void set(Token s);
     /**
-     * get accessor function that returns a token in order to remove it 
-     * from the datastructure.
+     *  that 
+     */
+    /**
+     * get accessor function
+     * @return returns a token in order to remove it from the datastructure.
      */
     public Token get();
     /**
-     * isEmpty accessor function that enables the user to check if the 
-     * datastructure is empty (currently not holding any tokens)
+     * isEmpty accessor function
+     * @return returns true if the datastructure is not holding any
+     * tokens
      */
     public boolean isEmpty();
 }

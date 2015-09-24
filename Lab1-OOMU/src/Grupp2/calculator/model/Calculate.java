@@ -12,30 +12,25 @@ import java.util.Scanner;
 import java.util.Set;
 /**
  *
- * @author Darko
+ * @author Thires
  */
 
-    /**
-     * Calculate class is a class handles the user input by changing the
-     * operators and operands into tokens and storing them in the choosen 
-     * datastructure "bucket".
-     */
 public class Calculate {
     String exp;
     
     /**
-     * Calculate(String exp) constructor creats a Calculate object and stores the
-     * expression as a string.
+     * Calculate constructor creats a Calculate object
+     * @param exp is a string(expression) that needs to be converted into 
+     * tokens in order to be evaluated.
      */
     public Calculate(String exp){
         this.exp = exp;
     }
     
     /**
-     * CalculationMagic function that creates a new bucket and a scanner
-     * to handle the input and seperate it into tokens. Also the first token is
-     * withdrawn from the bucket to start the recursive call and the evaluation
-     * process.
+     * CalculatoinMagic function divides the expressions into tokens and starts 
+     * the recursive call for the eveluations process.
+     * @return is a double that's the sum of the evaluated expression.
      */
     public Double CalculationMagic(){
         SecretStorage bucket = new SecretStorage();        
@@ -47,7 +42,7 @@ public class Calculate {
         while(readExp.hasNext()){
             bucket.set(new Token(readExp.next()));
         }
-        Token t; //= new Token();
+        Token t; //= new Token
         t = (bucket.get());
 
         try{

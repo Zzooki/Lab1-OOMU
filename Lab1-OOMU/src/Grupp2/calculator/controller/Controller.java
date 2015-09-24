@@ -17,38 +17,35 @@ import java.util.Scanner;
 
 /**
  *
- * @author Darko
+ * @author Tobias
  */
 
-    /**
-     * Controller class handles the running of the program and 
-     * creates a seperation between the beautiful craftmanship worthy to be
-     * called "implementation" and the user interface.
-     */
+
 public class Controller {
     private int gear;
     
-    /**
-     * Controller the constructor for the controller class
-     * handles the value "gear" depending on this value the program
-     * will either read a file or read input from the user.
-     */
     
     public Controller(){
         this.gear = 0;
     }
+    
+    /**
+     * Controller the constructor for the controller class
+     * @param gear depending on this value the program will either read a 
+     * file or read input from the user.
+     */
     public Controller(int gear){
         this.gear = gear;
     }
     
     /**
-     * run(String args[]) this function is called for with the args
-     * array, cause it handles the running of the programm and will need the 
-     * source address for in and output files from the user incase user wishes
-     * to run the program with an in/output file. If that's not the case the
-     * program will run in "user-input mode", and the appropriate functions to
-     * evaluate the expression entered by the user will be called for.
+     * run function handles the running of the program 
+     * @param args contains the address for in and output files required if the
+     * user wishes to run the program with an in- and output file.
+     * If the user wishes the program to run in "user-input mode", the 
+     * appropriate functions to evaluate the expression(s) will be called for.
      */
+  
     public void run(String args[]){
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();

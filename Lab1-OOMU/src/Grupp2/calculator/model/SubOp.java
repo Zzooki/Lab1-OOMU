@@ -8,13 +8,9 @@ import Grupp2.calculator.exceptions.*;
 
 /**
  *
- * @author Zzooki
+ * @author Thires
  */
 
-    /**
-     * SubOp class is a subclass of the Operator class. This handles the
-     * subtraction operator objects.
-     */
 public class SubOp extends Operator{
     
     /**
@@ -25,11 +21,13 @@ public class SubOp extends Operator{
     }
      
      /**
-     * calcExp(seacretStorage bucket) this function handles the
-     * evaluation of an expression with the subtraction operator. To be able to 
-     * calculate the expression the function needs the datastructure in wich 
-     * the operands is stored called the bucket. After the evaluation the
-     * result is returned as a double.
+     * calcExp function handles the evaluation of an expression with a 
+     * subtraction operator.
+     * @param bucket in order to calculate the ecpression the function needs 
+     * the datastructure in wich the tokens are stored wich is the parameter 
+     * bucket.
+     * @return the function returns a double, the sum of the evaluated 
+     * expression
      */
     public double calcExp(SecretStorage bucket){
         double RL, LL, sum = 0;

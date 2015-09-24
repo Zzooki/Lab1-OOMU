@@ -7,14 +7,9 @@ package Grupp2.calculator.model;
 
 /**
  *
- * @author Darko
+ * @author Tobias
  */
 
-    /**
-     * @param Operator class is a subclass of the class Token. This object is 
-     * created when the token is evaluated as a operator type i.e "+" "*" "/" 
-     * "-" or "%".
-     */
 public class Operator extends Token {
     String s;
     
@@ -23,20 +18,23 @@ public class Operator extends Token {
     }
     
     /**
-     * @param Operator constructor creates an object holding the value of the 
-     * operator. Wich can be either "+" "*" "/" "-" or "%".
+     * Operator constructor creates an operator object
+     * @param s is a parameter for the operator wich can be either "+" "*" "/" 
+     * "-" or "%".
      */
     Operator(String s){
         this.s = s;
     }
 
-   
-     /**
-     * @param calcExp(SecretStorage bucket) this function manages the fact that
+    /**
+     * calcExp this function manages the fact that
      * different types of calculations is necessary inorder to calculate 
-     * different operators. So depending on wich kind of operator the 
-     * appropriate function for that operator is called for. 
-     */       
+     * different operators. And depending on the operator the appropriate 
+     * calculation functions is called for.
+     * @param bucket the datastructure for the tokens is needed to evaluate the
+     * expression and therefore a parameter to this function
+     * @return returns a double wich is the result of the evaluated expression.
+     */
     public double calcExp(SecretStorage bucket){
 
         if(null != s)switch (s) {

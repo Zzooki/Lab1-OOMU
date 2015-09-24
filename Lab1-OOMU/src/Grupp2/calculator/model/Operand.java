@@ -7,22 +7,19 @@ package Grupp2.calculator.model;
 
 /**
  *
- * @author Darko
+ * @author Thires
  */
 
-    /**
-     * Operand class is a subclass of the class Token. This object is 
-     * created when the token is evaluated as a numeric type.
-     */
 public class Operand extends Token{
     String s;
     
     Operand(){
         this.s = "";
     }
+    
     /**
-     * Operand cunstructor creates an object which consists of the 
-     * operands value.
+     * Operand cunstructor creates an operand object
+     * @param s is parameter for the value of the operand
      */
     Operand(String s){
         this.s = s;
@@ -31,6 +28,11 @@ public class Operand extends Token{
    /**
      * calcExp(SecretStorage bucket) this function returns the value of 
      * the object when called for as a double.
+     */
+    /**
+     * calcExp 
+     * @param bucket parameter bucket in wich tokens are stored
+     * @return returns the value of the operand object when called for.
      */
     public double calcExp(SecretStorage bucket){
         return Double.parseDouble(s);

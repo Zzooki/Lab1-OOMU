@@ -9,18 +9,18 @@ import Grupp2.calculator.controller.Controller;
  */
  /**
  *
- * @author Darko
+ * @author Tobias
  */
 
-    /**
-     * Calculator the class in wich the main function is called.
-     */
 
 public class Calculator {
     
-    /**
+     /**
      * main function in wich a Controller object is created and the run
      * function is called for.
+     * @param args parameter includes the possible addresses for the 
+     * in- and output files if the user wishes to run the program with 
+     * files as input.
      */
     public static void main(String[] args) {
         Controller cont = new Controller(args.length);

@@ -9,44 +9,25 @@ import java.util.Stack;
 
 /**
  *
- * @author Darko
+ * @author Rasmus
  */
 
-    /**
-     * SecretStorage implementation for the interface called 
-     * ISecretInterface. Datastructure chosen for this implementation 
-     * is a stack.
-     */
 public class SecretStorage implements ISecretInterface{
     private Stack stack = new Stack();
-    
-    /**
-     * SecretStorage creates an object of the seacret storage wich will 
-     * hold the desired datastructure to save the tokens.
-     */
     public void SecretStorage(){
     }
-    
-    /**
-     * set(Token s) adds a token to the stack when called for.
-     */
     @Override
+    
     public void set(Token s){
         stack.push(s);
     }
-    
-    /**
-     * get returns a token and removes it from the stack.
-     */
     @Override
+    
     public Token get(){      
         return (Token)stack.pop();
     }
-    
-    /**
-     * isEmpty returns true if the stack is empty
-     */
     @Override
+    
     public boolean isEmpty(){
         return stack.empty();
     }

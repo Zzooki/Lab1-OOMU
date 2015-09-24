@@ -8,14 +8,10 @@ import Grupp2.calculator.exceptions.CheckUserInput;
 
 /**
  *
- * @author Darko
+ * @author Rasmus
  */
 
 
-    /**
-     * Token class handles the tokens depending on if the token is an 
-     * operator or an operand the different calculation functions is called for.
-     */
 public class Token {
     String s;
          
@@ -24,17 +20,24 @@ public class Token {
     }
     
     /**
-     * Token constructor creates a token object in wich either an
-     * operator or an operand is stored.
+     * Token constructor creates a token object
+     * @param s is the value of the token wich is either an operand or an 
+     * operator
      */
     Token(String s){
         this.s = s;
     }
     
     /**
-     * calcExp(SecretStorage bucket) this function checks if the token 
-     * is either an operator or an operand. Depending on wich the appropriate 
-     * function is called for to calculate the expression.
+     * calcExp checks if the token is either an operator or an operand.
+     * Depending on wich the apptorpriate function is called for to calculate 
+     * the expression.
+     * @param bucket the datastructure for the tokens are needed to evaluate
+     * the expression and therefore a parameter to this function
+     * @return returns a double wich is the result of the evaluated expression.
+     * @throws CheckUserInput is the user would enter invalid input i.e 
+     * characters that is not numeric this error will be thrown so that the
+     * user gets another try at valid input.
      */
     public double calcExp(SecretStorage bucket) throws CheckUserInput{
         
@@ -49,18 +52,18 @@ public class Token {
     else
         throw new CheckUserInput(s);
     }
-    
+
     /**
-     * checkIfOperator function that returns true if the token is either
-     * "+", "-", "/", "*" or "%".
+     * checkIfOperator function
+     * @return returns true if the token is either "+", "-", "/", "*" or "%".
      */
     private boolean checkIfOperator(){
         return "+".equals(s) || "-".equals(s) || "/".equals(s) || "*".equals(s) ||"%".equals(s);
     }
     
     /**
-     * checkIfOperand function that returns true if the token is a 
-     * numereic value.
+     * checkIfOperand function 
+     * @return returns true if the token is a numereic value.
      */
     public boolean checkIfOperand(){
         try{  
@@ -73,7 +76,8 @@ public class Token {
     }
     
     /**
-     * tokenToString function that returns the token as a string.
+     * tokenToString function
+     * @return returns the token as a string.
      */
     public String tokenToString(){
         return this.s;

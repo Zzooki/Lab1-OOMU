@@ -8,13 +8,9 @@ import Grupp2.calculator.exceptions.*;
 
 /**
  *
- * @author Zzooki
+ * @author Thires
  */
 
-    /**
-     * DivisionOp class is a subclass of the Operator class. This handles
-     * the division operator objects.
-     */
 public class DivisionOp extends Operator{
     /**
      * DivisionOp constructor creats an object of the division operator.
@@ -23,12 +19,14 @@ public class DivisionOp extends Operator{
         
     }
      
-    /**
-     * calcExp(seacretStorage bucket) this function handles the
-     * evaluation of an expression with the division operator. To be able to 
-     * calculate the expression the function needs the datastructure in wich 
-     * the operands is stored called the bucket. After the evaluation the
-     * result is returned as a double.
+     /**
+     * calcExp function handles the evaluation of an expression with an division 
+     * operator.
+     * @param bucket in order to calculate the ecpression the function needs 
+     * the datastructure in wich the tokens are stored wich is the parameter 
+     * bucket.
+     * @return the function returns a double, the result of the evaluated 
+     * expression
      */
     public double calcExp(SecretStorage bucket){
         double RL, LL, sum = 0;

@@ -7,16 +7,21 @@ package Grupp2.calculator.exceptions;
 
 /**
  *
- * @author Rasmus
+ * @author Thires
  */
 
 /**
- * InvalidOperationException exception that gets thrown whenever the user tries to inputs an
- * expression that has too few or to many operators/operands.
- * @author Rasmus
+
+ * 
  */
 public class InvalidOperationException extends Exception{
     
+    /**
+     * InvalidOperationException, exception that gets thrown whenever the user 
+     * tries to evaluate an expression that has too few or to many 
+     * operators/operands.
+     * @param s the parameter is for the error occured.
+     */
     public InvalidOperationException(String s){
         super (s);
     }

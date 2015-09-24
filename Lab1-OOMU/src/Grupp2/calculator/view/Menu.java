@@ -7,19 +7,18 @@ package Grupp2.calculator.view;
 
 /**
  *
- * @author Darko
+ * @author Tobias
  */
 
-/**
- * Menu the main menu of the program.
- * @author Rasmus
- */
+
 public class Menu {
     
     public Menu(){
         
     }
-    
+    /**
+     * Prints the main menu of the program.
+     */
     public void printMenu(){
         System.out.println("Mata in några tal..");
     }

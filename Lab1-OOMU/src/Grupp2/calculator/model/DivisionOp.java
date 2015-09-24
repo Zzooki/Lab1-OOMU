@@ -28,18 +28,27 @@ public class DivisionOp extends Operator{
      * @return the function returns a double, the result of the evaluated 
      * expression
      */
+    @Override
     public double calcExp(SecretStorage bucket){
         double RL, LL, sum = 0;
         try{
+            if(bucket.isEmpty())
+                throw new InvalidOperationException("To few operands..");   
+        
             Token TokenRL = bucket.get();
             RL = TokenRL.calcExp(bucket);
+            
+            if(bucket.isEmpty())
+                throw new InvalidOperationException("To few operands..");   
+        
             Token TokenLL = bucket.get();
             LL = TokenLL.calcExp(bucket);
             
             sum = LL / RL;
-        }catch(CheckUserInput h){
+        }catch(CheckUserInput | InvalidOperationException h){
             System.err.println(h);
         }
+    
         return(sum);
     }
 }

@@ -11,10 +11,10 @@ package grupp2.calculator.model;
  */
 
 public class Operand extends Token{
-    String s;
+    private Double d;
     
     Operand(){
-        this.s = "";
+        this.d = null;
     }
     
     /**
@@ -22,7 +22,7 @@ public class Operand extends Token{
      * @param s is parameter for the value of the operand
      */
     Operand(String s){
-        this.s = s;
+        this.d = Double.parseDouble(s);
     }
 
    /**
@@ -34,8 +34,10 @@ public class Operand extends Token{
      * @param bucket parameter bucket in wich tokens are stored
      * @return returns the value of the operand object when called for.
      */
-    public Double calcExp(SecretStorage bucket){
-        return Double.parseDouble(s);
+    public Double calcExp(IStorageImplementation bucket){
+        return d;
     }
-
+    public String toString(){
+        return Double.toString(d);
+    }
 }

@@ -10,21 +10,7 @@ package grupp2.calculator.model;
  * @author Tobias
  */
 
-public class Operator extends Token {
-    String s;
-    
-    Operator(){
-        this.s = "";
-    }
-    
-    /**
-     * Operator constructor creates an operator object
-     * @param s is a parameter for the operator wich can be either "+" "*" "/" 
-     * "-" or "%".
-     */
-    Operator(String s){
-        this.s = s;
-    }
+public abstract class Operator extends Token {
 
     /**
      * calcExp this function manages the fact that
@@ -36,25 +22,8 @@ public class Operator extends Token {
      * @return returns a double wich is the result of the evaluated expression.
      */
     @Override
-    public Double calcExp(SecretStorage bucket){
-
-        if(s != null)switch (s) {
-            case "+":
-                AddOp aOp = new AddOp();
-                return aOp.calcExp(bucket);
-            case "-":
-                SubOp sOp = new SubOp();
-                return sOp.calcExp(bucket);
-            case "*":
-                MultiplicationOp mOp = new MultiplicationOp();
-                return mOp.calcExp(bucket);
-            case "/":
-                DivisionOp dOp = new DivisionOp();
-                return dOp.calcExp(bucket);
-            case "%":
-                ModOp ModulusOp = new ModOp();
-                return ModulusOp.calcExp(bucket);
-        }
-        return null;
-    }
+    abstract public Double calcExp(IStorageImplementation bucket);
+    
+    @Override
+    abstract public String toString();
 }

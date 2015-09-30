@@ -11,7 +11,7 @@ package grupp2.calculator.model;
  */
 
 
-public interface ISecretInterface {
+public interface IStorageImplementation {
     
     /**
      * SecretStorage creates an object of the choosen datastructure to 

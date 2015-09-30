@@ -25,6 +25,7 @@ import java.util.Scanner;
 
 public class Controller {
     private int commandLineParameterCount;
+    private String arguments[];
     
     
     public Controller(){
@@ -36,8 +37,13 @@ public class Controller {
      * @param gear depending on this value the program will either read a 
      * file or read input from the user.
      */
-    public Controller(int gear){
+    public Controller(int gear, String args[]){
         this.commandLineParameterCount = gear;
+        arguments = args;
+    }
+    
+    public Controller(int gear){
+        commandLineParameterCount = gear;
     }
     
     /**
@@ -48,20 +54,20 @@ public class Controller {
      * appropriate functions to evaluate the expression(s) will be called for.
      */
   
-    public void run(String args[]){
-        UserInterface user;
-        FileInterface file;
+    public void run(){
+        IProgramInterface user;
+        IProgramInterface file;
         if(commandLineParameterCount != 0 && commandLineParameterCount != 2) 
         {
-            System.out.println("Syntax: java Calculator " + args[0]);
+            System.out.println("Syntax: java Calculator " + arguments[0]);
             System.exit(1);
         }
         if(commandLineParameterCount == 0){
             user = new UserInterface();
-            user.runProgram(args);
+            user.runProgram(arguments);
         }else{
             file = new FileInterface();
-            file.runProgram(args);
+            file.runProgram(arguments);
         }
     
     }

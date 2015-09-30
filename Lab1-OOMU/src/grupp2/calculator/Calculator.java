@@ -23,8 +23,8 @@ public class Calculator {
      * files as input.
      */
     public static void main(String[] args) {
-        Controller cont = new Controller(args.length);
-        cont.run(args);
+        Controller cont = new Controller(args.length, args);
+        cont.run();
         
     }
     

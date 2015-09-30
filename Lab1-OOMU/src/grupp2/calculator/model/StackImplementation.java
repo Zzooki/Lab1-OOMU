@@ -12,7 +12,7 @@ import java.util.Stack;
  * @author Rasmus
  */
 
-public class SecretStorage implements ISecretInterface{
+public class StackImplementation implements IStorageImplementation{
     private Stack<Token> stack = new Stack<Token>();
     
     @Override

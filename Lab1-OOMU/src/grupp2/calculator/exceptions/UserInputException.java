@@ -11,14 +11,14 @@ package grupp2.calculator.exceptions;
  * @author Rasmus
  */
 
-public class CheckUserInput extends Exception{
+public class UserInputException extends Exception{
     
     /**
      * CheckUserInput an exception that gets thrown when the user enters an 
      * invalid token into the calculator, for example characters a-z.
      * @param c is the parameter for the error occured.
      */
-    public CheckUserInput(String c){
+    public UserInputException(String c){
         super("Invalid Token: " + c);
     }
     

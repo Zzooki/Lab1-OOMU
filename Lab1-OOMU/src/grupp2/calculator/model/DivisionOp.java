@@ -23,27 +23,27 @@ public class DivisionOp extends Operator{
      /**
      * calcExp function handles the evaluation of an expression with an division 
      * operator.
-     * @param bucket in order to calculate the ecpression the function needs 
-     * the datastructure in wich the tokens are stored wich is the parameter 
-     * bucket.
+     * @param storage in order to calculate the ecpression the function needs 
+ the datastructure in wich the tokens are stored wich is the parameter 
+ storage.
      * @return the function returns a double, the result of the evaluated 
      * expression
      */
     @Override
-    public Double calcExp(SecretStorage bucket){
+    public Double calcExp(IStorageImplementation storage){
         Double RL = null, LL = null, sum = null;
         try{
-            if(bucket.isEmpty())
+            if(storage.isEmpty())
                 throw new InvalidOperationException("To few operands..");   
         
-            Token tokenRL = bucket.get();
-            RL = tokenRL.calcExp(bucket);
+            Token tokenRL = storage.get();
+            RL = tokenRL.calcExp(storage);
             
-            if(bucket.isEmpty())
+            if(storage.isEmpty())
                 throw new InvalidOperationException("To few operands..");   
         
-            Token tokenLL = bucket.get();
-            LL = tokenLL.calcExp(bucket);
+            Token tokenLL = storage.get();
+            LL = tokenLL.calcExp(storage);
             if(RL == 0)
                 throw new DivideByZeroException(LL + "/" + RL);
             sum = LL / RL;
@@ -57,4 +57,8 @@ public class DivisionOp extends Operator{
         return(sum);
     }
 
+         @Override
+    public String toString(){
+        return "/";
+    }
 }

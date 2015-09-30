@@ -15,8 +15,7 @@ import java.util.Set;
  */
 
 public class RPNCalculator {
-    //String exp;
-    SecretStorage storage;
+    IStorageImplementation storage;
     
     /**
      * Calculate constructor creats a Calculate object
@@ -24,7 +23,7 @@ public class RPNCalculator {
      * tokens in order to be evaluated.
      */
     public RPNCalculator(){
-        this.storage = new SecretStorage(); 
+        this.storage = new StackImplementation(); 
     }
     
     /**
@@ -36,7 +35,7 @@ public class RPNCalculator {
                
         Scanner readExp = new Scanner(exp);
         Double d = null;
-        Token o;
+        Token o = null;
         
         
 
@@ -45,12 +44,28 @@ public class RPNCalculator {
                 String s = readExp.next();
 
 
-                if(checkIfOperator(s))
-                    o = new Operator(s);
-                else if (checkIfOperand(s))
+                if(checkIfOperator(s)){
+                    switch (s) {
+                        case "+":
+                            o = new AddOp();
+                            break;
+                        case "-":
+                            o = new SubOp();
+                            break;   
+                        case "*":
+                            o = new MultiplicationOp();
+                            break;
+                        case "/":
+                            o = new DivisionOp();
+                            break;
+                        case "%":
+                            o = new ModOp();
+                            break;
+                    }
+                }else if (checkIfOperand(s))
                     o = new Operand(s);
                 else
-                    throw new CheckUserInput(s);
+                    throw new UserInputException(s);
 
                 storage.set(o);
             }
@@ -58,13 +73,13 @@ public class RPNCalculator {
             t = (storage.get());
             d = t.calcExp(storage);
             if(!storage.isEmpty())
-                throw new InvalidOperationException("To few operands..");
+                throw new InvalidOperationException("To few operators..");
             else
                 return(d);
 
         }catch(NumberFormatException wrong){
             System.err.println(wrong);
-        }catch(CheckUserInput h){
+        }catch(UserInputException h){
             System.err.println(h);
         }catch(InvalidOperationException h){
             System.err.println(h);

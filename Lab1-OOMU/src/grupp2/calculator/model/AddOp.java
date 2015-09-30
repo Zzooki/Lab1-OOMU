@@ -25,28 +25,28 @@ public class AddOp extends Operator{
      /**
      * calcExp function handles the evaluation of an expression with an addition 
      * operator.
-     * @param bucket in order to calculate the ecpression the function needs 
-     * the datastructure in wich the tokens are stored wich is the parameter 
-     * bucket.
+     * @param storage in order to calculate the ecpression the function needs 
+ the datastructure in wich the tokens are stored wich is the parameter 
+ storage.
      * @return the function returns a double, the sum of the evaluated 
      * expression
      */
     @Override
-    public Double calcExp(SecretStorage bucket){
+    public Double calcExp(IStorageImplementation storage){
         Double RL = null, LL = null, sum = null;
         try{
         
-        if(bucket.isEmpty())
+        if(storage.isEmpty())
             throw new InvalidOperationException("To few operands..");   
         
-        Token tokenRL = bucket.get();
-        RL = tokenRL.calcExp(bucket);
+        Token tokenRL = storage.get();
+        RL = tokenRL.calcExp(storage);
         
-        if(bucket.isEmpty())
+        if(storage.isEmpty())
             throw new InvalidOperationException("To few operands..");   
         
-        Token tokenLL = bucket.get();
-        LL = tokenLL.calcExp(bucket);
+        Token tokenLL = storage.get();
+        LL = tokenLL.calcExp(storage);
         
         sum = LL + RL;
         }catch(InvalidOperationException h){
@@ -55,5 +55,8 @@ public class AddOp extends Operator{
     
         return(sum);
     }
-
+    @Override
+    public String toString(){
+        return "+";
+    }
 }

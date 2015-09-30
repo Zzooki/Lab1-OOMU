@@ -13,7 +13,7 @@ import java.util.Stack;
  */
 
 public class SecretStorage implements ISecretInterface{
-    private Stack stack = new Stack();
+    private Stack<Token> stack = new Stack<Token>();
     
     @Override
     public void SecretStorage(){
@@ -26,7 +26,7 @@ public class SecretStorage implements ISecretInterface{
     
     @Override
         public Token get(){      
-        return (Token)stack.pop();
+        return stack.pop();
     }
     
     @Override

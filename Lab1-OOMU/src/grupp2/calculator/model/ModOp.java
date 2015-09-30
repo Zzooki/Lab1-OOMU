@@ -46,9 +46,9 @@ public class ModOp extends Operator{
             Token tokenLL = bucket.get();
             LL = tokenLL.calcExp(bucket);
             if(RL == 0)
-                throw new DivideByZeroException(tokenLL.tokenToString() + "/" + tokenRL.tokenToString());
+                throw new DivideByZeroException(LL + "%" + RL);
             sum = LL % RL;
-        }catch(CheckUserInput | InvalidOperationException h){
+        }catch(InvalidOperationException h){
             System.err.println(h);
         }catch(DivideByZeroException h){
             System.err.println(h);

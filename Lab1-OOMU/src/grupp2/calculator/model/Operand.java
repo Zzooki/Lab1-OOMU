@@ -37,4 +37,5 @@ public class Operand extends Token{
     public Double calcExp(SecretStorage bucket){
         return Double.parseDouble(s);
     }
+
 }

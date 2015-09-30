@@ -12,21 +12,15 @@ import grupp2.calculator.exceptions.CheckUserInput;
  */
 
 
-public class Token {
-    String s;
-         
-    Token(){
-        
-    }
+public abstract class Token {
+
     
     /**
      * Token constructor creates a token object
      * @param s is the value of the token wich is either an operand or an 
      * operator
      */
-    Token(String s){
-        this.s = s;
-    }
+
     
     /**
      * calcExp checks if the token is either an operator or an operand.
@@ -39,48 +33,5 @@ public class Token {
      * characters that is not numeric this error will be thrown so that the
      * user gets another try at valid input.
      */
-    public Double calcExp(SecretStorage bucket) throws CheckUserInput{
-        
-    if(checkIfOperator()){
-        Operator o = new Operator(this.s);
-        return o.calcExp(bucket);
-    }
-    else if (checkIfOperand()){
-        Operand oo = new Operand(this.s);
-        return oo.calcExp(bucket);
-       }
-    else
-        throw new CheckUserInput(s);
-    }
-
-    /**
-     * checkIfOperator function
-     * @return returns true if the token is either "+", "-", "/", "*" or "%".
-     */
-    private boolean checkIfOperator(){
-        return "+".equals(s) || "-".equals(s) || "/".equals(s) || "*".equals(s) ||"%".equals(s);
-    }
-    
-    /**
-     * checkIfOperand function 
-     * @return returns true if the token is a numereic value.
-     */
-    public boolean checkIfOperand(){
-        try{  
-          Double d = Double.parseDouble(s);  
-        }  
-        catch(NumberFormatException nfe){  
-          return false;  
-        }  
-        return true;
-    }
-    
-    /**
-     * tokenToString function
-     * @return returns the token as a string.
-     */
-    public String tokenToString(){
-        return this.s;
-    }
-    
+    public abstract Double calcExp(SecretStorage bucket);
 }

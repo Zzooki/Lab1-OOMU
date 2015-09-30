@@ -32,20 +32,30 @@ public class RPNCalculator {
      * the recursive call for the eveluations process.
      * @return is a double that's the sum of the evaluated expression.
      */
-    public Double CalculateResult(String exp){
+    public Double CalculateResult(String exp) throws CheckUserInput{
                
         Scanner readExp = new Scanner(exp);
         Double d = null;
+        Token o;
         
         
-        
-        while(readExp.hasNext()){
-            storage.set(new Token(readExp.next()));
-        }
-        Token t; //= new Token
-        t = (storage.get());
 
         try{
+            while(readExp.hasNext()){   
+                String s = readExp.next();
+
+
+                if(checkIfOperator(s))
+                    o = new Operator(s);
+                else if (checkIfOperand(s))
+                    o = new Operand(s);
+                else
+                    throw new CheckUserInput(s);
+
+                storage.set(o);
+            }
+            Token t; //= new Token
+            t = (storage.get());
             d = t.calcExp(storage);
             if(!storage.isEmpty())
                 throw new InvalidOperationException(t.tokenToString());
@@ -61,9 +71,36 @@ public class RPNCalculator {
         }
         
         return null;
+        
+    }
+        /**
+     * checkIfOperator function
+     * @return returns true if the token is either "+", "-", "/", "*" or "%".
+     */
+    private boolean checkIfOperator(String s){
+        return "+".equals(s) || "-".equals(s) || "/".equals(s) || "*".equals(s) ||"%".equals(s);
     }
     
     
+    
+    /**
+     * checkIfOperand function 
+     * @return returns true if the token is a numereic value.
+     */
+    public boolean checkIfOperand(String s){
+        try{  
+          Double d = Double.parseDouble(s);  
+        }  
+        catch(NumberFormatException nfe){  
+          return false;  
+        }  
+        return true;
+    }
 }
+    
+
+    
+    
+
 
 

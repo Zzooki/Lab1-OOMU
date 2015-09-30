@@ -32,7 +32,7 @@ public class RPNCalculator {
      * the recursive call for the eveluations process.
      * @return is a double that's the sum of the evaluated expression.
      */
-    public Double CalculateResult(String exp) throws CheckUserInput{
+    public Double CalculateResult(String exp){
                
         Scanner readExp = new Scanner(exp);
         Double d = null;
@@ -58,7 +58,7 @@ public class RPNCalculator {
             t = (storage.get());
             d = t.calcExp(storage);
             if(!storage.isEmpty())
-                throw new InvalidOperationException(t.tokenToString());
+                throw new InvalidOperationException("To few operands..");
             else
                 return(d);
 

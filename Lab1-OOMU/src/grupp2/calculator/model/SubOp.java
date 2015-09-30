@@ -47,7 +47,7 @@ public class SubOp extends Operator{
             LL = tokenLL.calcExp(bucket);
 
             sum = LL - RL;
-        }catch(CheckUserInput | InvalidOperationException h){
+        }catch(InvalidOperationException h){
             System.err.println(h);
         }
     

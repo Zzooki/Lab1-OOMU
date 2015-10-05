@@ -55,19 +55,18 @@ public class Controller {
      */
   
     public void run(){
-        IProgramInterface user;
-        IProgramInterface file;
+        IProgramInterface view;
         if(commandLineParameterCount != 0 && commandLineParameterCount != 2) 
         {
             System.out.println("Syntax: java Calculator " + arguments[0]);
             System.exit(1);
         }
         if(commandLineParameterCount == 0){
-            user = new UserInterface();
-            user.runProgram(arguments);
+            view = new UserInterface();
+            view.runProgram(arguments);
         }else{
-            file = new FileInterface();
-            file.runProgram(arguments);
+            view = new FileInterface();
+            view.runProgram(arguments);
         }
     
     }

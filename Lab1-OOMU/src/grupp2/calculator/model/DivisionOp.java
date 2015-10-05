@@ -1,12 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupp2.calculator.model;
 
 /**
- *
+ * DivisionOp Class handles the creation of the division operator which is a 
+ * subclass of the operator class. The class contains it's own implementation 
+ * to evaluate an expression containing this operator.
  * @author Thires
  */
 

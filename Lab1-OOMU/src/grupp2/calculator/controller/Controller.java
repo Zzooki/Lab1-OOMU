@@ -1,21 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupp2.calculator.controller;
 
-import grupp2.calculator.model.RPNCalculator;
-import grupp2.calculator.exceptions.*;
 import grupp2.calculator.view.FileInterface;
 import grupp2.calculator.view.IProgramInterface;
 import grupp2.calculator.view.UserInterface;
-import java.io.ObjectInputStream;
-import java.io.FileInputStream;
-import java.io.*;
-import static java.lang.System.out;
-
-import java.util.Scanner;
 
 /**
  * The Controller class handles views so that different views are created if 

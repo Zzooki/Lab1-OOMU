@@ -14,7 +14,7 @@ public class DivideByZeroException extends Exception{
      /**
       * DivideByZeroException method prints an appropriate error message for the
       * error occurring when an expression contains a denominator which is zero.
-      * @param the parameter is the error occurred. 
+      * @param s the parameter is the error occurred. 
       */
      public DivideByZeroException(String s){
         super ("Can't divide by zero: " + s);

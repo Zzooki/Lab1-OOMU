@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupp2.calculator.model;
 
 import grupp2.calculator.exceptions.*;
 
 /**
- * AddOp Class 
+ * AddOp Class handles the creation of the Addition operator which is a 
+ * subclass of the operator class. The class contains it's own implementation 
+ * to evaluate an expression containing this operator.
  * @author Rasmus
  */
 
@@ -56,6 +53,9 @@ public class AddOp extends Operator{
         return(sum);
     }
     @Override
+    /**
+     * toString method for the AddOp class returns the addition operator as a string.
+     */
     public String toString(){
         return "+";
     }

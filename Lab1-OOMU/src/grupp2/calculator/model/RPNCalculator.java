@@ -18,7 +18,7 @@ public class RPNCalculator {
     IStorageImplementation storage;
     
     /**
-     * Calculate constructor creats a Calculate object
+     * Calculate constructor creates a Calculate object
      * @param exp is a string(expression) that needs to be converted into 
      * tokens in order to be evaluated.
      */
@@ -28,7 +28,7 @@ public class RPNCalculator {
     
     /**
      * CalculatoinMagic function divides the expressions into tokens and starts 
-     * the recursive call for the eveluations process.
+     * the recursive call for the evaluations process.
      * @return is a double that's the sum of the evaluated expression.
      */
     public Double CalculateResult(String exp){
@@ -100,7 +100,7 @@ public class RPNCalculator {
     
     /**
      * checkIfOperand function 
-     * @return returns true if the token is a numereic value.
+     * @return returns true if the token is a numeric value.
      */
     public boolean checkIfOperand(String s){
         try{  

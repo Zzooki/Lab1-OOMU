@@ -18,7 +18,7 @@ public class Operand extends Token{
     }
     
     /**
-     * Operand cunstructor creates an operand object
+     * Operand constructor creates an operand object
      * @param s is parameter for the value of the operand
      */
     Operand(String s){
@@ -31,7 +31,7 @@ public class Operand extends Token{
      */
     /**
      * calcExp 
-     * @param bucket parameter bucket in wich tokens are stored
+     * @param bucket parameter bucket in which tokens are stored
      * @return returns the value of the operand object when called for.
      */
     public Double calcExp(IStorageImplementation bucket){

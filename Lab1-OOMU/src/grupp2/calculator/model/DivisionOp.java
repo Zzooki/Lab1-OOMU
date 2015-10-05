@@ -23,9 +23,9 @@ public class DivisionOp extends Operator{
      /**
      * calcExp function handles the evaluation of an expression with an division 
      * operator.
-     * @param storage in order to calculate the ecpression the function needs 
- the datastructure in wich the tokens are stored wich is the parameter 
- storage.
+     * @param storage in order to calculate the expression the function needs 
+     * the data structure in which the tokens are stored which is the parameter 
+     * storage.
      * @return the function returns a double, the result of the evaluated 
      * expression
      */

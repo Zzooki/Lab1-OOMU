@@ -18,10 +18,11 @@ import static java.lang.System.out;
 import java.util.Scanner;
 
 /**
- *
+ * The Controller class handles views so that different views are created if 
+ * the user wishes to run the program with their own input or with input
+ * stored in a file. 
  * @author Tobias
  */
-
 
 public class Controller {
     private int commandLineParameterCount;
@@ -31,11 +32,12 @@ public class Controller {
     public Controller(){
         this.commandLineParameterCount = 0;
     }
-    
     /**
-     * Controller the constructor for the controller class
-     * @param gear depending on this value the program will either read a 
-     * file or read input from the user.
+     * Controller the constructor for the Controller class
+     * @param gear depending on this value the program will either read a file
+     * or reds input from the user
+     * @param args contains the search paths for in and output files required if the
+     * user wishes to run the program with an in- and output file.
      */
     public Controller(int gear, String args[]){
         this.commandLineParameterCount = gear;
@@ -45,15 +47,11 @@ public class Controller {
     public Controller(int gear){
         commandLineParameterCount = gear;
     }
-    
-    /**
-     * run function handles the running of the program 
-     * @param args contains the address for in and output files required if the
-     * user wishes to run the program with an in- and output file.
-     * If the user wishes the program to run in "user-input mode", the 
-     * appropriate functions to evaluate the expression(s) will be called for.
-     */
   
+    /**
+     * run function handles the two types of running-styles of the program
+     * by creating a view either for the "user-input mode" or the "file input mode"
+     */
     public void run(){
         IProgramInterface view;
         if(commandLineParameterCount != 0 && commandLineParameterCount != 2) 

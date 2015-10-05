@@ -14,12 +14,12 @@ public abstract class Operator extends Token {
 
     /**
      * calcExp this function manages the fact that
-     * different types of calculations is necessary inorder to calculate 
+     * different types of calculations is necessary in order to calculate 
      * different operators. And depending on the operator the appropriate 
      * calculation functions is called for.
-     * @param bucket the datastructure for the tokens is needed to evaluate the
+     * @param bucket the data structure for the tokens is needed to evaluate the
      * expression and therefore a parameter to this function
-     * @return returns a double wich is the result of the evaluated expression.
+     * @return returns a double which is the result of the evaluated expression.
      */
     @Override
     abstract public Double calcExp(IStorageImplementation bucket);

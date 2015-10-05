@@ -8,7 +8,7 @@ package grupp2.calculator.model;
 import grupp2.calculator.exceptions.*;
 
 /**
- *
+ * AddOp Class 
  * @author Rasmus
  */
 
@@ -16,7 +16,7 @@ import grupp2.calculator.exceptions.*;
 public class AddOp extends Operator{
     
     /**
-     * AddOp constructor creats an object of the addition operator.
+     * AddOp constructor creates an object of the addition operator.
      */
     public AddOp(){
         
@@ -25,9 +25,9 @@ public class AddOp extends Operator{
      /**
      * calcExp function handles the evaluation of an expression with an addition 
      * operator.
-     * @param storage in order to calculate the ecpression the function needs 
- the datastructure in wich the tokens are stored wich is the parameter 
- storage.
+     * @param storage in order to calculate the expression the function needs 
+     * the data structure in which the tokens are stored which is the parameter 
+     * storage.
      * @return the function returns a double, the sum of the evaluated 
      * expression
      */

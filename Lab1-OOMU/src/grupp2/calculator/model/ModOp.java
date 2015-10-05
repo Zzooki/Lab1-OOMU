@@ -15,7 +15,7 @@ import grupp2.calculator.exceptions.*;
 
 public class ModOp extends Operator{
     /**
-     * DivisionOp constructor creats an object of the modulo operator.
+     * DivisionOp constructor creates an object of the modulo operator.
      */
     public ModOp(){
         
@@ -24,9 +24,9 @@ public class ModOp extends Operator{
      /**
      * calcExp function handles the evaluation of an expression with a modulo 
      * operator.
-     * @param storage in order to calculate the ecpression the function needs 
- the datastructure in wich the tokens are stored wich is the parameter 
- storage.
+     * @param storage in order to calculate the expression the function needs 
+     * the data structure in which the tokens are stored which is the parameter 
+     * storage.
      * @return the function returns a double, the result of the evaluated 
      * expression
      */

@@ -18,18 +18,18 @@ public abstract class Token {
     
     /**
      * Token constructor creates a token object
-     * @param s is the value of the token wich is either an operand or an 
+     * @param s is the value of the token which is either an operand or an 
      * operator
      */
 
     
     /**
      * calcExp checks if the token is either an operator or an operand.
-     * Depending on wich the apptorpriate function is called for to calculate 
+     * Depending on which the appropriate function is called for to calculate 
      * the expression.
-     * @param bucket the datastructure for the tokens are needed to evaluate
+     * @param bucket the data structure for the tokens are needed to evaluate
      * the expression and therefore a parameter to this function
-     * @return returns a double wich is the result of the evaluated expression.
+     * @return returns a double which is the result of the evaluated expression.
      * @throws UserInputException is the user would enter invalid input i.e 
      * characters that is not numeric this error will be thrown so that the
      * user gets another try at valid input.

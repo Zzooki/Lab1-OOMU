@@ -2,13 +2,9 @@ package grupp2.calculator;
 
 import grupp2.calculator.controller.Controller;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
  /**
- *
+ * Calculator class handles the main function as well as creating a Controller
+ * object to continue the execution by calling for the run function.
  * @author Tobias
  */
 
@@ -16,7 +12,7 @@ import grupp2.calculator.controller.Controller;
 public class Calculator {
     
      /**
-     * main function in wich a Controller object is created and the run
+     * main function in which a Controller object is created and the run
      * function is called for.
      * @param args parameter includes the possible addresses for the 
      * in- and output files if the user wishes to run the program with 

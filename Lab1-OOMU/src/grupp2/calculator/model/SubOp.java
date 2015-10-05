@@ -15,7 +15,7 @@ import grupp2.calculator.exceptions.*;
 public class SubOp extends Operator{
     
     /**
-     * SubOp constructor creats an object of the subtraction operator.
+     * SubOp constructor creates an object of the subtraction operator.
      */
      public SubOp(){
         
@@ -24,9 +24,9 @@ public class SubOp extends Operator{
      /**
      * calcExp function handles the evaluation of an expression with a 
      * subtraction operator.
-     * @param storage in order to calculate the ecpression the function needs 
- the datastructure in wich the tokens are stored wich is the parameter 
- storage.
+     * @param storage in order to calculate the expression the function needs 
+     * the data structure in which the tokens are stored which is the parameter 
+     * storage.
      * @return the function returns a double, the sum of the evaluated 
      * expression
      */

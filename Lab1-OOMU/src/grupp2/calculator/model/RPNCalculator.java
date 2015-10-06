@@ -1,16 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupp2.calculator.model;
 
 
 import grupp2.calculator.exceptions.*;
 import java.util.Scanner;
-import java.util.Set;
 /**
- *
+ * RPNCalculator class is the class that handles the creation of the token objects
+ * as well as creating and storing it into the storage.
  * @author Thires
  */
 
@@ -18,18 +13,23 @@ public class RPNCalculator {
     IStorageImplementation storage;
     
     /**
-     * Calculate constructor creates a Calculate object
-     * @param exp is a string(expression) that needs to be converted into 
-     * tokens in order to be evaluated.
+     * RPNCalculator constructor creates a Calculate object and contains the 
+     * data structure which stores the tokens.
      */
     public RPNCalculator(){
         this.storage = new StackImplementation(); 
     }
     
     /**
-     * CalculatoinMagic function divides the expressions into tokens and starts 
-     * the recursive call for the evaluations process.
-     * @return is a double that's the sum of the evaluated expression.
+     * CalculateResult method used for deviding the expression into tokens and the
+     * appropriate objects are created depending on if the token is one of the 
+     * different operators or an operand. The method stores theese in the 
+     * storage and thereafter the expression is evaluated. This method also
+     * catches the possible errors that can occur and calls for the functions 
+     * handling the error.
+     * @param exp is the parameter for the expression that needs to be evaluated.
+     * @return the method returns a double that's the result of the evaluated 
+     * expression
      */
     public Double CalculateResult(String exp){
                
@@ -88,15 +88,14 @@ public class RPNCalculator {
         return null;
         
     }
-        /**
-     * checkIfOperator function
-     * @return returns true if the token is either "+", "-", "/", "*" or "%".
-     */
+    
+    /**
+    * checkIfOperator function
+    * @return returns true if the token is either "+", "-", "/", "*" or "%".
+    */
     private boolean checkIfOperator(String s){
         return "+".equals(s) || "-".equals(s) || "/".equals(s) || "*".equals(s) ||"%".equals(s);
     }
-    
-    
     
     /**
      * checkIfOperand function 

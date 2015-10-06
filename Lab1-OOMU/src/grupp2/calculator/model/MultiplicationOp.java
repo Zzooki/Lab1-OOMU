@@ -6,7 +6,9 @@
 package grupp2.calculator.model;
 
 /**
- *
+ * Multiplication Class handles the creation of the multiplication operator 
+ * which is a subclass of the operator class. The class contains it's own 
+ * implementation to evaluate an expression containing this operator.
  * @author Rasmus
  */
 
@@ -53,7 +55,12 @@ public class MultiplicationOp extends Operator{
     
         return(sum);
     }
-         @Override
+    
+    @Override
+    /**
+     * toString method for the multiplicaton operator 
+     * @returns the operator as a string
+     */
     public String toString(){
         return "*";
     }

@@ -9,9 +9,9 @@ package grupp2.calculator.exceptions;
 public class InvalidOperationException extends Exception{
     
     /**
-     * InvalidOperationException, exception that gets thrown whenever the user 
-     * tries to evaluate an expression that has too few or to many 
-     * operators/operands.
+     * InvalidOperationException method handles exceptions that gets thrown 
+     * whenever the user tries to evaluate an expression that has too few or 
+     * to many operators/operands.
      * @param s the parameter is for the error occurred.
      */
     public InvalidOperationException(String s){

@@ -54,7 +54,11 @@ public class DivisionOp extends Operator{
         return(sum);
     }
 
-         @Override
+    @Override
+    /**
+     * toString method for the division class 
+     * @returns the operator as a string
+     */
     public String toString(){
         return "/";
     }

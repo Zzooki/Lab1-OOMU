@@ -11,5 +11,9 @@ package grupp2.calculator.view;
  */
 public interface IProgramInterface {
     
+   /**
+    * 
+    * @param args 
+    */
    public void runProgram(String args[]);
 }

@@ -6,7 +6,8 @@
 package grupp2.calculator.model;
 
 /**
- *
+ * Operand Class is a subclass of the token class these objects are
+ * created whenever the token is numeric and not an operator.
  * @author Thires
  */
 
@@ -19,24 +20,25 @@ public class Operand extends Token{
     
     /**
      * Operand constructor creates an operand object
-     * @param s is parameter for the value of the operand
+     * @param s is parameter containing the value of the operand
      */
     Operand(String s){
         this.d = Double.parseDouble(s);
     }
 
-   /**
-     * calcExp(SecretStorage bucket) this function returns the value of 
-     * the object when called for as a double.
-     */
     /**
-     * calcExp 
-     * @param bucket parameter bucket in which tokens are stored
+     * calcExp(SecretStorage bucket) 
+     * @param bucket parameter is the data structure in which the tokens are stored
      * @return returns the value of the operand object when called for.
      */
     public Double calcExp(IStorageImplementation bucket){
         return d;
     }
+    
+    /**
+     * toString method for the Operand objects
+     * @return returns the value of the operand as a string.
+     */
     public String toString(){
         return Double.toString(d);
     }

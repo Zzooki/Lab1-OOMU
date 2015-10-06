@@ -54,7 +54,8 @@ public class AddOp extends Operator{
     }
     @Override
     /**
-     * toString method for the AddOp class returns the addition operator as a string.
+     * toString method for the AddOp class 
+     * @returns the addition operator as a string.
      */
     public String toString(){
         return "+";

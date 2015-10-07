@@ -8,6 +8,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,14 +32,13 @@ public class FileInterface implements IProgramInterface {
         try{
             
             File inFile = new File(args[0]);
-            /*File outFile = new File(args[1]);
-            FileWriter out = new FileWriter(outFile);*/
+           
             
             File outFile = new File(args[1]);
-            FileOutputStream fos = new FileOutputStream(outFile);
-            PrintStream ps = new PrintStream(fos);
-            System.setOut(ps);
-            System.setErr(ps);
+            FileOutputStream fileOutputStream = new FileOutputStream(outFile);
+            PrintStream printStream = new PrintStream(fileOutputStream);
+            System.setOut(printStream);
+            System.setErr(printStream);
 
             Scanner in = new Scanner(inFile);
             while(in.hasNextLine()){
@@ -46,14 +47,14 @@ public class FileInterface implements IProgramInterface {
                 
                 if(d != null)
                     System.out.println(d);
-                //else
-                    //System.out.println("Error:");
             }
 
-            //out.flush();
-            //out.close();
+            fileOutputStream.flush();
+            fileOutputStream.close();
         }
         catch(FileNotFoundException e){
+            System.err.println(e);
+        } catch (IOException e) {
             System.err.println(e);
         }
     }

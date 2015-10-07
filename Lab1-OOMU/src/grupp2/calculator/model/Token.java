@@ -20,10 +20,11 @@ public abstract class Token {
     public abstract Double calcExp(IStorageImplementation bucket);
     
     /**
-     * toString method for the tokens is appreciated to be able to be described
-     * as a string and therefore implemented in the operator class as well as the 
+     * toString method for the tokens because sometimes the object might be needed
+     * to be described as a string and therefore implemented in the operator class as well as the 
      * operand class.
      * @return the operator or the operand as a string.
      */
+    @Override
     public abstract String toString();
 }

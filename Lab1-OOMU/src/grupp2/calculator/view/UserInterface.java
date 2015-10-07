@@ -4,8 +4,9 @@ import grupp2.calculator.model.RPNCalculator;
 import java.util.Scanner;
 
 /**
- *
- * @author S142015
+ * UserInterface Class implements the IProgramInterface and handles the run 
+ * function in case the user wishes to run the program in "user input mode".
+ * @author Rasmus
  */
 public class UserInterface implements IProgramInterface{
     private Double d;
@@ -13,7 +14,8 @@ public class UserInterface implements IProgramInterface{
     private Scanner input;
     
     /**
-     * 
+     * UserInterface constructor for the class creates a scanner inorder to 
+     * read the input provided by the user.
      */
     public UserInterface(){
         this.input = new Scanner(System.in);
@@ -21,9 +23,12 @@ public class UserInterface implements IProgramInterface{
     
     @Override
     /**
-     * 
+     * runProgram handles the reading the expressions given by the user. This 
+     * method also calls for the evaluation function so tha the expressions can 
+     * be evaluated. When the evaluation is finnished the result will be printed 
+     * in the console.
      */
-    public void runProgram(String args[]){
+    public void runProgram(){
         RPNCalculator calc = new RPNCalculator();
 
         while(true){
@@ -37,7 +42,7 @@ public class UserInterface implements IProgramInterface{
         
     }
     /**
-     * 
+     * printMenu prints a welcoming message with instructions for the user.
      */
     public void printMenu(){
         System.out.println("Mata in några tal..");

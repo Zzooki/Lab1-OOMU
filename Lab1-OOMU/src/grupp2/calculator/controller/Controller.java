@@ -47,10 +47,10 @@ public class Controller {
         }
         if(commandLineParameterCount == 0){
             view = new UserInterface();
-            view.runProgram(arguments);
+            view.runProgram();
         }else{
-            view = new FileInterface();
-            view.runProgram(arguments);
+            view = new FileInterface(arguments);
+            view.runProgram();
         }
     
     }

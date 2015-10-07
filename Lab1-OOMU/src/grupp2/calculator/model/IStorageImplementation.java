@@ -7,13 +7,7 @@ package grupp2.calculator.model;
  */
 
 public interface IStorageImplementation {
-    
-    /**
-     * SecretStorage creates an object of the chosen data structure to 
-     * store the tokens
-     */
-    public void SecretStorage();
-    
+        
     /**
      * set accessor function
      * @param s s is the token that needs to be added to the data structure

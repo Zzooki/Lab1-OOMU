@@ -11,9 +11,6 @@ import java.util.Stack;
 public class StackImplementation implements IStorageImplementation{
     private Stack<Token> stack = new Stack<>();
     
-    @Override
-    public void SecretStorage(){
-    }
     
     @Override    
     public void set(Token s){

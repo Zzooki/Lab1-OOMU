@@ -3,7 +3,7 @@ package grupp2.calculator.exceptions;
 /**
  * DivideByZeroException Class handles the error occurring when the user or the
  * file contains an expression where the denominator is zero.
- * @author S142015
+ * @author Thires
  */
 public class DivideByZeroException extends Exception{
      /**

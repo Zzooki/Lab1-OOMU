@@ -38,4 +38,8 @@ public interface IStorageImplementation {
      * tokens
      */
     public boolean isEmpty();
+    
+    
+    
+    public void cleanStorage();
 }

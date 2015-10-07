@@ -29,6 +29,12 @@ public class StackImplementation implements IStorageImplementation{
     public boolean isEmpty(){
         return stack.empty();
     }
+    @Override
+    public void cleanStorage(){
+        while(!this.isEmpty()){
+            this.get();
+        }
+    }
     
     
     

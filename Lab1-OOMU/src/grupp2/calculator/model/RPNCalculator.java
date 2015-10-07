@@ -34,7 +34,7 @@ public class RPNCalculator {
     public Double CalculateResult(String exp){
                
         Scanner readExp = new Scanner(exp);
-        Double d = null;
+        Double d;
         Token o = null;
         
         
@@ -74,8 +74,10 @@ public class RPNCalculator {
             d = t.calcExp(storage);
             if(!storage.isEmpty())
                 throw new InvalidOperationException("To few operators..");
-            else
+            else{
+                storage.cleanStorage();
                 return(d);
+            }
 
         }catch(NumberFormatException wrong){
             System.err.println(wrong);
@@ -85,6 +87,7 @@ public class RPNCalculator {
             System.err.println(h);
         }
         
+        storage.cleanStorage();
         return null;
         
     }
@@ -99,6 +102,7 @@ public class RPNCalculator {
     
     /**
      * checkIfOperand function 
+     * @param s
      * @return returns true if the token is a numeric value.
      */
     public boolean checkIfOperand(String s){

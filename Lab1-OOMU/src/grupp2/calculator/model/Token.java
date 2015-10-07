@@ -10,8 +10,6 @@ package grupp2.calculator.model;
 
 public abstract class Token {
 
-    
-    
     /**
      * calcExp is required to be implemented by the operator class and the 
      * operand class which makes this an abstract method.
@@ -22,8 +20,8 @@ public abstract class Token {
     public abstract Double calcExp(IStorageImplementation bucket);
     
     /**
-     * toString method for the tokens is appriciated to be abled to be described
-     * as a string and therefore implemented in the operator class aswell as the 
+     * toString method for the tokens is appreciated to be able to be described
+     * as a string and therefore implemented in the operator class as well as the 
      * operand class.
      * @return the operator or the operand as a string.
      */

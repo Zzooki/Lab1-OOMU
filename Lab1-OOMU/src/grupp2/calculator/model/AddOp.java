@@ -29,7 +29,8 @@ public class AddOp extends Operator{
      */
     @Override
     public Double calcExp(IStorageImplementation storage){
-        Double RL = null, LL = null, sum = null;
+        Double RL, LL;
+        Double sum = null;
         try{
         
         if(storage.isEmpty())

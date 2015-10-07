@@ -29,7 +29,8 @@ public class ModOp extends Operator{
      */
     @Override
     public Double calcExp(IStorageImplementation storage){
-        Double RL = null, LL = null, sum = null;
+        Double RL, LL; 
+        Double sum = null;
         try{
             if(storage.isEmpty())
                 throw new InvalidOperationException("To few operands..");   
@@ -45,9 +46,7 @@ public class ModOp extends Operator{
             if(RL == 0)
                 throw new DivideByZeroException(LL + "%" + RL);
             sum = LL % RL;
-        }catch(InvalidOperationException h){
-            System.err.println(h);
-        }catch(DivideByZeroException h){
+        }catch(InvalidOperationException | DivideByZeroException h){
             System.err.println(h);
         }
     

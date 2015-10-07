@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 
 public class RPNCalculator {
-    IStorageImplementation storage;
+    private IStorageImplementation storage;
     
     /**
      * RPNCalculator constructor creates a Calculate object and contains the 
@@ -34,9 +34,7 @@ public class RPNCalculator {
                
         Scanner readExp = new Scanner(exp);
         Double d;
-        Token o = null;
-        
-        
+        Token o = null;       
 
         try{
             while(readExp.hasNext()){   
@@ -78,12 +76,8 @@ public class RPNCalculator {
                 return(d);
             }
 
-        }catch(NumberFormatException wrong){
+        }catch(NumberFormatException | UserInputException | InvalidOperationException wrong){
             System.err.println(wrong);
-        }catch(UserInputException h){
-            System.err.println(h);
-        }catch(InvalidOperationException h){
-            System.err.println(h);
         }
         
         storage.cleanStorage();

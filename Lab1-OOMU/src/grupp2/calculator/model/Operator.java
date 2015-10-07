@@ -26,6 +26,7 @@ public abstract class Operator extends Token {
     /**
      * toString method is an abstract method implemented in all the tokens
      * to be able to describe the objects as strings.
+     * @return returns the operator as a string.
      */
     @Override
     abstract public String toString();

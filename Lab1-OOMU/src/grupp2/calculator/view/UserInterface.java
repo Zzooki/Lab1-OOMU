@@ -8,9 +8,9 @@ import java.util.Scanner;
  * @author S142015
  */
 public class UserInterface implements IProgramInterface{
-    Double d;
-    String line;
-    Scanner input;
+    private Double d;
+    private String line;
+    private Scanner input;
     
     /**
      * 
@@ -20,6 +20,9 @@ public class UserInterface implements IProgramInterface{
     }
     
     @Override
+    /**
+     * 
+     */
     public void runProgram(String args[]){
         RPNCalculator calc = new RPNCalculator();
 

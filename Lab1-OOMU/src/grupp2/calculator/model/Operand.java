@@ -26,6 +26,7 @@ public class Operand extends Token{
      * @param bucket parameter is the data structure in which the tokens are stored
      * @return returns the value of the operand object when called for.
      */
+    @Override
     public Double calcExp(IStorageImplementation bucket){
         return d;
     }
@@ -34,6 +35,7 @@ public class Operand extends Token{
      * toString method for the Operand objects
      * @return returns the value of the operand as a string.
      */
+    @Override
     public String toString(){
         return Double.toString(d);
     }

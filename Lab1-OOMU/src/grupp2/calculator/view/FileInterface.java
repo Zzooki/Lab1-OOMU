@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author S142015
  */
 public class FileInterface implements IProgramInterface {
-    Double d;
+    private Double d;
     
     /**
      * 
@@ -23,16 +23,15 @@ public class FileInterface implements IProgramInterface {
     }
     
     @Override
+    /**
+     * 
+     */
     public void runProgram(String args[]){
         RPNCalculator calc = new RPNCalculator();
-        
-        try{
-            
-            File inFile = new File(args[0]);
-           
-            
-            File outFile = new File(args[1]);
-            FileOutputStream fileOutputStream = new FileOutputStream(outFile);
+        File inFile = new File(args[0]);
+        File outFile = new File(args[1]);
+        try(FileOutputStream fileOutputStream = new FileOutputStream(outFile)){
+
             PrintStream printStream = new PrintStream(fileOutputStream);
             System.setOut(printStream);
             System.setErr(printStream);
@@ -45,9 +44,6 @@ public class FileInterface implements IProgramInterface {
                 if(d != null)
                     System.out.println(d);
             }
-
-            fileOutputStream.flush();
-            fileOutputStream.close();
         }
         catch(FileNotFoundException e){
             System.err.println(e);

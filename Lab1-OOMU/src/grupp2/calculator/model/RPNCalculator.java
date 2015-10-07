@@ -1,6 +1,5 @@
 package grupp2.calculator.model;
 
-
 import grupp2.calculator.exceptions.*;
 import java.util.Scanner;
 /**
@@ -94,6 +93,8 @@ public class RPNCalculator {
     
     /**
     * checkIfOperator function
+    * @param s is the parameter for this method which is the string(character) 
+    * to be checked if it's an operator.
     * @return returns true if the token is either "+", "-", "/", "*" or "%".
     */
     private boolean checkIfOperator(String s){
@@ -102,7 +103,8 @@ public class RPNCalculator {
     
     /**
      * checkIfOperand function 
-     * @param s
+     * @param s is the parameter for this method which is the string(character)
+     * which needs to be checked if it's a numeric value.
      * @return returns true if the token is a numeric value.
      */
     public boolean checkIfOperand(String s){

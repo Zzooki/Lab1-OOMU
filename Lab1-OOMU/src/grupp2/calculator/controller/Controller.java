@@ -10,7 +10,6 @@ import grupp2.calculator.view.UserInterface;
  * stored in a file. 
  * @author Tobias
  */
-
 public class Controller {
     private int commandLineParameterCount;
     private String arguments[];

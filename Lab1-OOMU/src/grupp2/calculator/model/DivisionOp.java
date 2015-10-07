@@ -11,7 +11,7 @@ import grupp2.calculator.exceptions.*;
 
 public class DivisionOp extends Operator{
     /**
-     * DivisionOp constructor creats an object of the division operator.
+     * DivisionOp constructor creates an object of the division operator.
      */
     public DivisionOp(){
         

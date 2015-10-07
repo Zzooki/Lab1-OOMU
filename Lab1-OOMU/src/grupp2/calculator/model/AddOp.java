@@ -9,7 +9,6 @@ import grupp2.calculator.exceptions.*;
  * @author Rasmus
  */
 
-
 public class AddOp extends Operator{
     
     /**

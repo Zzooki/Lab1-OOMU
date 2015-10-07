@@ -7,7 +7,6 @@ package grupp2.calculator.exceptions;
  * between a-z.
  * @author Rasmus
  */
-
 public class UserInputException extends Exception{
     
     /**

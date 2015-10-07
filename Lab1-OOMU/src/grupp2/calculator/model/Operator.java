@@ -22,6 +22,11 @@ public abstract class Operator extends Token {
     @Override
     abstract public Double calcExp(IStorageImplementation bucket);
     
+   
+    /**
+     * toString method is an abstract method implemented in all the tokens
+     * to be able to describe the objects as strings.
+     */
     @Override
     abstract public String toString();
 }

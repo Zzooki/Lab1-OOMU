@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupp2.calculator.model;
 
 /**
@@ -10,7 +5,6 @@ package grupp2.calculator.model;
  * in order to manage the tokens stored within the chosen data structure.
  * @author Tobias
  */
-
 
 public interface IStorageImplementation {
     
@@ -39,7 +33,9 @@ public interface IStorageImplementation {
      */
     public boolean isEmpty();
     
-    
-    
+    /**
+     * cleanStorage method is used for emptying the storage to be able to evaluate
+     * multiple expressions.
+     */
     public void cleanStorage();
 }

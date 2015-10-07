@@ -7,8 +7,6 @@ import grupp2.calculator.controller.Controller;
  * object to continue the execution by calling for the run function.
  * @author Tobias
  */
-
-
 public class Calculator {
     
      /**
